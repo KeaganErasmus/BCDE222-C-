@@ -44,6 +44,7 @@ namespace ChessBoardModel
 
             switch (chessPiece)
             {
+                // Knight
                 case (Part)'n':
                     theGrid[currentCell.RowNumber + 2, currentCell.ColumnNumber + 1].LegalNextMove = true;
                     theGrid[currentCell.RowNumber + 2, currentCell.ColumnNumber - 1].LegalNextMove = true;
@@ -55,18 +56,36 @@ namespace ChessBoardModel
                     theGrid[currentCell.RowNumber - 1, currentCell.ColumnNumber - 2].LegalNextMove = true;
                     break;
 
+                // Bishop
                 case (Part)'b':
+                    theGrid[currentCell.RowNumber + 1, currentCell.ColumnNumber + 1].LegalNextMove = true;
+                    theGrid[currentCell.RowNumber + 2, currentCell.ColumnNumber + 2].LegalNextMove = true;
+                    theGrid[currentCell.RowNumber + 3, currentCell.ColumnNumber + 3].LegalNextMove = true;
                     break;
 
+                // Queen
                 case (Part)'q':
                     break;
 
+                // King
                 case (Part)'k':
+                    theGrid[currentCell.RowNumber, currentCell.ColumnNumber + 1].LegalNextMove = true;
+                    theGrid[currentCell.RowNumber, currentCell.ColumnNumber - 1].LegalNextMove = true;
+                    theGrid[currentCell.RowNumber + 1, currentCell.ColumnNumber].LegalNextMove = true;
+                    theGrid[currentCell.RowNumber - 1, currentCell.ColumnNumber].LegalNextMove = true;
+                    theGrid[currentCell.RowNumber - 1, currentCell.ColumnNumber + 1].LegalNextMove = true;
+                    theGrid[currentCell.RowNumber + 1, currentCell.ColumnNumber - 1].LegalNextMove = true;
+                    theGrid[currentCell.RowNumber + 1, currentCell.ColumnNumber + 1].LegalNextMove = true;
+                    theGrid[currentCell.RowNumber - 1, currentCell.ColumnNumber - 1].LegalNextMove = true;
                     break;
 
+                // Rook
                 case (Part)'r':
+                    theGrid[currentCell.RowNumber, currentCell.ColumnNumber + 4].LegalNextMove = true;
                     break;
             }
+
+            theGrid[currentCell.RowNumber, currentCell.ColumnNumber].CurrentlyOccupied = true;
         }
     }
 }

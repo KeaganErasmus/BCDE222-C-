@@ -10,8 +10,26 @@ namespace ChessMaze
             // show empty board
             printBoard(myBoard);
 
+            Cell currentCell = setCurrentCell();
+            currentCell.CurrentlyOccupied = true;
+
+            myBoard.MarkNextLegalMoves(currentCell, Part.PlayerOnRook);
+
+            printBoard(myBoard);
 
             Console.ReadLine();
+        }
+
+        private static Cell setCurrentCell()
+        {
+            // get user x and y
+            Console.WriteLine("entert row number");
+            int currentRow = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("entert col number");
+            int currentCol = int.Parse(Console.ReadLine());
+
+            return myBoard.theGrid[currentRow, currentCol];
         }
 
         private static void printBoard(Board myBoard)
@@ -33,7 +51,7 @@ namespace ChessMaze
                     }
                     else
                     {
-                        Console.Write("e");
+                        Console.Write(".");
                     }
                 }
                 Console.WriteLine();
