@@ -1,0 +1,12 @@
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\obj\Debug\net5.0\ChessBoardModel.csproj.AssemblyReference.cache
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\obj\Debug\net5.0\ChessBoardModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\obj\Debug\net5.0\ChessBoardModel.AssemblyInfoInputs.cache
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\obj\Debug\net5.0\ChessBoardModel.AssemblyInfo.cs
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\obj\Debug\net5.0\ChessBoardModel.csproj.CoreCompileInputs.cache
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\bin\Debug\net5.0\ChessBoardModel.deps.json
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\bin\Debug\net5.0\ChessBoardModel.dll
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\bin\Debug\net5.0\ChessBoardModel.pdb
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\obj\Debug\net5.0\ChessBoardModel.dll
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\obj\Debug\net5.0\refint\ChessBoardModel.dll
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\obj\Debug\net5.0\ChessBoardModel.pdb
+D:\C#\BCDE222\ChessMaze\ChessBoardModel\obj\Debug\net5.0\ref\ChessBoardModel.dll
