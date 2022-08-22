@@ -13,7 +13,7 @@ namespace ChessMaze
             Cell currentCell = setCurrentCell();
             currentCell.CurrentlyOccupied = true;
 
-            myBoard.MarkNextLegalMoves(currentCell, Part.PlayerOnRook);
+            myBoard.MarkNextLegalMoves(currentCell, Part.PlayerOnKing);
 
             printBoard(myBoard);
 
