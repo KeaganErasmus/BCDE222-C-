@@ -46,21 +46,43 @@ namespace ChessBoardModel
             {
                 // Knight
                 case (Part)'n':
-                    theGrid[currentCell.RowNumber + 2, currentCell.ColumnNumber + 1].LegalNextMove = true;
-                    theGrid[currentCell.RowNumber + 2, currentCell.ColumnNumber - 1].LegalNextMove = true;
-                    theGrid[currentCell.RowNumber - 2, currentCell.ColumnNumber + 1].LegalNextMove = true;
-                    theGrid[currentCell.RowNumber - 2, currentCell.ColumnNumber - 1].LegalNextMove = true;
-                    theGrid[currentCell.RowNumber + 1, currentCell.ColumnNumber + 2].LegalNextMove = true;
-                    theGrid[currentCell.RowNumber + 1, currentCell.ColumnNumber - 2].LegalNextMove = true;
-                    theGrid[currentCell.RowNumber - 1, currentCell.ColumnNumber + 2].LegalNextMove = true;
-                    theGrid[currentCell.RowNumber - 1, currentCell.ColumnNumber - 2].LegalNextMove = true;
+                    int[,] targetPositions = new int[,]
+                    {
+                        {  2, -1 },
+                        {  2,  1 },
+                        {  1,  2 },
+                        {  1, -2 },
+                        { -1,  2 },
+                        { -1, -2 },
+                        { -2,  1 },
+                        { -2, -1 }
+                    };
+                    for (var i = 0; i < targetPositions.GetLength(0); ++i)
+                    {
+                        if ((currentCell.RowNumber + targetPositions[i, 0] >= 0) & (currentCell.RowNumber + targetPositions[i, 0] < Size)
+                            & (currentCell.ColumnNumber + targetPositions[i, 1] >= 0) & (currentCell.ColumnNumber + targetPositions[i, 1] < Size))
+                        {
+                            theGrid[currentCell.RowNumber + targetPositions[i, 0], currentCell.ColumnNumber + targetPositions[i, 1]].LegalNextMove = true;
+                        }
+                    }
+
                     break;
 
                 // Bishop
                 case (Part)'b':
-                    theGrid[currentCell.RowNumber + 1, currentCell.ColumnNumber + 1].LegalNextMove = true;
-                    theGrid[currentCell.RowNumber + 2, currentCell.ColumnNumber + 2].LegalNextMove = true;
-                    theGrid[currentCell.RowNumber + 3, currentCell.ColumnNumber + 3].LegalNextMove = true;
+
+                     //theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
+
+                    for (int i = 0; i < Size - currentCell.RowNumber; i++)
+                    {
+                        for (int j = 0; j < currentCell.ColumnNumber; j++)
+                        {
+                            theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
+                        }
+                    }
+
+                    //theGrid[currentCell.RowNumber + 2, currentCell.ColumnNumber + 2].LegalNextMove = true;
+                    //theGrid[currentCell.RowNumber + 3, currentCell.ColumnNumber + 3].LegalNextMove = true;
                     break;
 
                 // Queen
@@ -81,7 +103,26 @@ namespace ChessBoardModel
 
                 // Rook
                 case (Part)'r':
-                    theGrid[currentCell.RowNumber, currentCell.ColumnNumber + 4].LegalNextMove = true;
+                    // Checks the moves to the right and down
+                    for (int i = 0; i < Size - currentCell.RowNumber; i++)
+                    {
+                        theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
+
+                        for (int j = 0; j < currentCell.ColumnNumber; j++)
+                        {
+                            theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j-1].LegalNextMove = true;
+                        }
+                    }
+                    // Checks moves to the left and up
+                    for (int i = 0; i < currentCell.RowNumber; i++)
+                    {
+                        theGrid[currentCell.RowNumber - i - 1 , currentCell.ColumnNumber].LegalNextMove = true;
+
+                        for (int j = 0; j < Size - currentCell.ColumnNumber; j++)
+                        {
+                            theGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].LegalNextMove = true;
+                        }
+                    }
                     break;
             }
 
