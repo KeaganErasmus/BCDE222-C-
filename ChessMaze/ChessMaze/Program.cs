@@ -1,4 +1,10 @@
-﻿using ChessBoardModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using ChessBoardModel;
 
 namespace ChessMaze
 {
@@ -13,7 +19,7 @@ namespace ChessMaze
             Cell currentCell = setCurrentCell();
             currentCell.CurrentlyOccupied = true;
 
-            myBoard.MarkNextLegalMoves(currentCell, Part.PlayerOnKing);
+            myBoard.MarkNextLegalMoves(currentCell, Part.PlayerOnKnight);
 
             printBoard(myBoard);
 
@@ -23,18 +29,20 @@ namespace ChessMaze
         private static Cell setCurrentCell()
         {
             // get user x and y
-            Console.WriteLine("entert row number");
+            Console.WriteLine("enter row number");
             int currentRow = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("entert col number");
+            Console.WriteLine("enter col number");
             int currentCol = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nRow: {0}, Col: {1}", currentRow, currentCol);
 
             return myBoard.theGrid[currentRow, currentCol];
         }
 
         private static void printBoard(Board myBoard)
         {
-            // display chess board: 'X' = current piece, '+' = legal next move, E = empty
+            // display chess board: 'X' = current piece, '+' = legal next move, * = empty
             for (int x = 0; x < myBoard.Size; x++)
             {
                 for (int y = 0; y < myBoard.Size; y++)
@@ -43,7 +51,7 @@ namespace ChessMaze
 
                     if (c.CurrentlyOccupied == true)
                     {
-                        Console.Write('X');
+                        Console.Write('x');
                     }
                     else if (c.LegalNextMove == true)
                     {
