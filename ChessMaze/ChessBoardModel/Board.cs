@@ -12,7 +12,7 @@ namespace ChessBoardModel
 
         public Cell[,] theGrid { get; set; }
 
-        public Board (int s)
+        public Board(int s)
         {
             // Initial board size
             Size = s;
@@ -22,7 +22,7 @@ namespace ChessBoardModel
             // filling 2D array with cells
             for (int i = 0; i < Size; i++)
             {
-                for(int j = 0; j < Size; j++)
+                for (int j = 0; j < Size; j++)
                 {
                     theGrid[i, j] = new Cell(i, j);
                 }
@@ -71,7 +71,7 @@ namespace ChessBoardModel
                 // Bishop
                 case (Part)'b':
 
-                     //theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
+                    //theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
 
                     for (int i = 0; i < Size - currentCell.RowNumber; i++)
                     {
@@ -110,13 +110,13 @@ namespace ChessBoardModel
 
                         for (int j = 0; j < currentCell.ColumnNumber; j++)
                         {
-                            theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j-1].LegalNextMove = true;
+                            theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j - 1].LegalNextMove = true;
                         }
                     }
                     // Checks moves to the left and up
                     for (int i = 0; i < currentCell.RowNumber; i++)
                     {
-                        theGrid[currentCell.RowNumber - i - 1 , currentCell.ColumnNumber].LegalNextMove = true;
+                        theGrid[currentCell.RowNumber - i - 1, currentCell.ColumnNumber].LegalNextMove = true;
 
                         for (int j = 0; j < Size - currentCell.ColumnNumber; j++)
                         {
@@ -127,6 +127,23 @@ namespace ChessBoardModel
             }
 
             theGrid[currentCell.RowNumber, currentCell.ColumnNumber].CurrentlyOccupied = true;
+        }
+
+        public Cell SetOccupiedPiece(int occupiedRow, int occupiedCol, Part piece)
+        {
+            Cell occupiedCell = this.theGrid[occupiedRow, occupiedCol];
+            // get x and y co-ords and check they're are within the board
+            if (occupiedCell.CurrentlyOccupied == false)
+            {
+                occupiedCell.Piece = piece;
+                occupiedCell.CurrentlyOccupied = true;
+                return occupiedCell;
+            }
+            else
+            {
+                Console.WriteLine("Col and Row number must be between 0 - 7");
+                return occupiedCell;
+            }
         }
     }
 }
