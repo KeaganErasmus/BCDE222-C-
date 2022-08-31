@@ -133,7 +133,7 @@ namespace ChessBoardModel
         {
             Cell occupiedCell = this.theGrid[occupiedRow, occupiedCol];
             // get x and y co-ords and check they're are within the board
-            if (occupiedCell.CurrentlyOccupied == false)
+            if (!occupiedCell.CurrentlyOccupied)
             {
                 occupiedCell.Piece = piece;
                 occupiedCell.CurrentlyOccupied = true;
@@ -141,7 +141,7 @@ namespace ChessBoardModel
             }
             else
             {
-                Console.WriteLine("Col and Row number must be between 0 - 7");
+                Console.WriteLine(occupiedCell.Piece);
                 return occupiedCell;
             }
         }

@@ -14,7 +14,7 @@ namespace ChessBoardModel
         public bool CurrentlyOccupied { get; set; }
         public bool LegalNextMove { get; set; }
 
-        public Part Piece { get; set; } 
+        public Part Piece { get; set; }
 
         public Cell(int x, int y)
         {
