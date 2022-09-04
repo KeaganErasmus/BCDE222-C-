@@ -23,8 +23,8 @@ namespace ChessMaze
             // Set pieces on board
             myBoard.SetOccupiedPiece(3, 3, (Part)'N');
             myBoard.SetOccupiedPiece(3, 7, (Part)'N');
-            myBoard.SetOccupiedPiece(2, 6, (Part)'b');
-            myBoard.SetOccupiedPiece(0, 0, (Part)'k');
+            myBoard.SetOccupiedPiece(2, 6, (Part)'B');
+            myBoard.SetOccupiedPiece(0, 0, (Part)'K');
 
             printBoard(myBoard);
 
@@ -47,7 +47,7 @@ namespace ChessMaze
 
         private static void printBoard(Board myBoard)
         {
-            // display chess board: 'X' = current piece, '+' = legal next move, * = empty
+            // display chess board: 'X' = current piece, '+' = legal next move, . = empty
             for (int x = 0; x < myBoard.Size; x++)
             {
                 for (int y = 0; y < myBoard.Size; y++)

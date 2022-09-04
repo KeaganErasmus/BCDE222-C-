@@ -133,7 +133,7 @@ namespace ChessBoardModel
         {
             Cell occupiedCell = this.theGrid[occupiedRow, occupiedCol];
             // get x and y co-ords and check they're are within the board
-            if (!occupiedCell.CurrentlyOccupied)
+            if (occupiedCell.CurrentlyOccupied == false)
             {
                 occupiedCell.Piece = piece;
                 occupiedCell.CurrentlyOccupied = true;
