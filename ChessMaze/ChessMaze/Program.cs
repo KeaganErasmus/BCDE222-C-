@@ -14,49 +14,69 @@ namespace ChessMaze
         static void Main(string[] args)
         {
             // show empty board
-            printBoard(myBoard);
+            //printBoard(myBoard);
 
-            Cell currentCell = setCurrentCell();
-            currentCell.CurrentlyOccupied = true;
+            Cell currentCell = setCurrentCell(3, 3);
 
-            myBoard.MarkNextLegalMoves(currentCell, Part.PlayerOnKing);
+
             // Set pieces on board
-            myBoard.SetOccupiedPiece(3, 3, (Part)'N');
-            myBoard.SetOccupiedPiece(3, 7, (Part)'N');
+            //myBoard.SetOccupiedPiece(1, 1, (Part)'r');
+            myBoard.SetOccupiedPiece(0, 7, (Part)'N');
             myBoard.SetOccupiedPiece(2, 6, (Part)'B');
-            myBoard.SetOccupiedPiece(0, 0, (Part)'K');
+            myBoard.SetOccupiedPiece(3, 7, (Part)'R');
+            myBoard.SetOccupiedPiece(1, 3, (Part)'K');
+            myBoard.SetOccupiedPiece(0, 4, (Part)'R');
+            myBoard.SetOccupiedPiece(7, 7, (Part)'K');
 
+            myBoard.MarkNextLegalMoves(currentCell, Part.PlayerOnRook);
             printBoard(myBoard);
 
             Console.ReadLine();
         }
 
-        private static Cell setCurrentCell()
+        private static Cell setCurrentCell(int currentRow, int currentCol)
         {
-            // get user x and y
-            Console.WriteLine("enter row number");
-            int currentRow = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("enter col number");
-            int currentCol = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("\nRow: {0}, Col: {1}", currentRow, currentCol);
-
             return myBoard.theGrid[currentRow, currentCol];
         }
 
         private static void printBoard(Board myBoard)
         {
-            // display chess board: 'X' = current piece, '+' = legal next move, . = empty
+            // display chess board: 'X' = current piece, '+' = legal next move, * = empty
             for (int x = 0; x < myBoard.Size; x++)
             {
                 for (int y = 0; y < myBoard.Size; y++)
                 {
                     Cell c = myBoard.theGrid[x, y];
 
-                    if (c.CurrentlyOccupied == true)
+                    if (c.playerCell)
                     {
-                        Console.Write('x');
+                        Console.Write('X');
+
+                    }else if (c.CurrentlyOccupied == true)
+                    {
+                        // K, R, B, N
+                        switch (c.Piece)
+                        {
+                            case (Part)'K':
+                                Console.Write('K');
+                                break;
+
+                            case (Part)'R':
+                                Console.Write('R');
+                                break;
+
+                            case (Part)'B':
+                                Console.Write('B');
+                                break;
+
+                            case (Part)'N':
+                                Console.Write('N');
+                                break;
+
+                            case (Part)'Q':
+                                Console.Write('Q');
+                                break;
+                        }
                     }
                     else if (c.LegalNextMove == true)
                     {

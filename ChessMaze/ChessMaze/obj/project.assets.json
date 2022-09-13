@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net5.0": {
       "ChessBoardModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -22,39 +22,39 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net5.0": [
       "ChessBoardModel >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Keagan\\.nuget\\packages\\": {}
+    "C:\\Users\\kje0074\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
+      "projectUniqueName": "C:\\Users\\kje0074\\OneDrive - Ara Institute of Canterbury\\aY2 S2\\BCDE222-main\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
       "projectName": "ChessMaze",
-      "projectPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
-      "packagesPath": "C:\\Users\\Keagan\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\obj\\",
+      "projectPath": "C:\\Users\\kje0074\\OneDrive - Ara Institute of Canterbury\\aY2 S2\\BCDE222-main\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
+      "packagesPath": "C:\\Users\\kje0074\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kje0074\\OneDrive - Ara Institute of Canterbury\\aY2 S2\\BCDE222-main\\ChessMaze\\ChessMaze\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Keagan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kje0074\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\C#\\BCDE222\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj": {
-              "projectPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj"
+            "C:\\Users\\kje0074\\OneDrive - Ara Institute of Canterbury\\aY2 S2\\BCDE222-main\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj": {
+              "projectPath": "C:\\Users\\kje0074\\OneDrive - Ara Institute of Canterbury\\aY2 S2\\BCDE222-main\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj"
             }
           }
         }
@@ -66,8 +66,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "imports": [
           "net461",
           "net462",
@@ -83,7 +83,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
       }
     }
   }
