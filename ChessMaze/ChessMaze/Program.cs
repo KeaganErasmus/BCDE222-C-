@@ -16,23 +16,13 @@ namespace ChessMaze
         {
             myBoard.GameStart();
 
-            Cell currentCell = myBoard.SetCurrentCell(1, 0);
-
-            // Start the timer for the game
-            var timer = new Stopwatch();
-            timer.Start();
-
-
-            // Set pieces on board
-            myBoard.SetOccupiedPiece(1, 0, (Part)'R');
-            myBoard.SetOccupiedPiece(0, 7, (Part)'N');
-            myBoard.SetOccupiedPiece(2, 6, (Part)'B');
-            myBoard.SetOccupiedPiece(3, 7, (Part)'R');
-            myBoard.SetOccupiedPiece(1, 3, (Part)'K');
-            myBoard.SetOccupiedPiece(0, 4, (Part)'R');
-            myBoard.SetOccupiedPiece(7, 7, (Part)'K');
-
             // Set the player at the start of the game
+            Cell currentCell = myBoard.SetCurrentCell(1, 0);
+            
+            // This starts a timer to show the amount of time it took to do all moves
+            myBoard.StartTimer();
+
+            FirstLevel();
             Console.WriteLine("Move count: {0}", myBoard.moveCount);
 
             myBoard.MarkNextLegalMoves(currentCell, currentCell.Piece);
@@ -43,27 +33,39 @@ namespace ChessMaze
             myBoard.ResetAllLegalMoves();
             myBoard.MarkNextLegalMoves(nextMove, nextMove.Piece);
 
-            myBoard.moveCounter();
+            myBoard.MoveCounter();
             Console.WriteLine("Move count: {0}", myBoard.moveCount);
 
             printBoard(myBoard);
 
+            // This move is not Legal we should get a message telling us it is not legal
+            // And there should be no Legal moves being printed
             Cell nextMove1 = myBoard.SetNextMove(0, 5, nextMove);
             myBoard.ResetAllLegalMoves();
             myBoard.MarkNextLegalMoves(nextMove1, nextMove1.Piece);
 
             printBoard(myBoard);
 
-            timer.Stop();
+            myBoard.StopTimer();
 
-            TimeSpan timeTaken = timer.Elapsed;
-            string time = timeTaken.ToString(@"m\:ss\.fff");
-
-            // Print the time taken
-            Console.WriteLine("Time Taken: {0}", time);
+            //myBoard.ResetGame();
+            //FirstLevel();
+            //printBoard(myBoard);
 
 
             Console.ReadLine();
+        }
+
+        private static void FirstLevel()
+        {
+            // Set pieces on board for the first level
+            myBoard.SetOccupiedPiece(1, 0, (Part)'R');
+            myBoard.SetOccupiedPiece(0, 7, (Part)'N');
+            myBoard.SetOccupiedPiece(2, 6, (Part)'B');
+            myBoard.SetOccupiedPiece(3, 7, (Part)'R');
+            myBoard.SetOccupiedPiece(1, 3, (Part)'K');
+            myBoard.SetOccupiedPiece(0, 4, (Part)'R');
+            myBoard.SetOccupiedPiece(7, 7, (Part)'K');
         }
 
         private static void printBoard(Board myBoard)
