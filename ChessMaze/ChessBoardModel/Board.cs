@@ -9,6 +9,7 @@ namespace ChessBoardModel
     public class Board
     {
         public int Size { get; set; }
+        public int moveCount;
 
         public Cell[,] theGrid { get; set; }
 
@@ -29,21 +30,25 @@ namespace ChessBoardModel
             }
         }
 
-        public void MarkNextLegalMoves(Cell currentCell, Part chessPiece)
+        public void GameStart()
         {
-            // clear the board
+            // clears the board
             for (int i = 0; i < Size; i++)
             {
                 for (int j = 0; j < Size; j++)
                 {
-                    theGrid[i, j].LegalNextMove = false;
+                    theGrid[i, j].CurrentlyOccupied = false;
+                    theGrid[i, j].LegalNextMove     = false;
                 }
             }
+        }
 
+        public void MarkNextLegalMoves(Cell currentCell, Part chessPiece)
+        {
             // display legal moves for each piece
             switch (chessPiece)
             {
-                case (Part)'n':
+                case (Part)'N':
                     int[,] targetPositions = new int[,]
                     {
                         {  2, -1 },
@@ -68,7 +73,7 @@ namespace ChessBoardModel
 
                     break;
 
-                case (Part)'b':
+                case (Part)'B':
                     for (var i = 0; i < Size; ++i)
                     {
                         if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
@@ -139,7 +144,7 @@ namespace ChessBoardModel
                     }
                     break;
 
-                case (Part)'q':
+                case (Part)'Q':
 
                     // Diagonal movement
                     for (var i = 0; i < Size; ++i)
@@ -270,7 +275,7 @@ namespace ChessBoardModel
                     }
                     break;
 
-                case (Part)'k':
+                case (Part)'K':
                     targetPositions = new int[,]
                     {
                         {  1, -1 },
@@ -294,7 +299,7 @@ namespace ChessBoardModel
                     }
                     break;
 
-                case (Part)'r':
+                case (Part)'R':
                     // left and down
                     for (int i = 0; i < Size - currentCell.RowNumber; i++)
                     {
@@ -356,20 +361,35 @@ namespace ChessBoardModel
             theGrid[currentCell.RowNumber, currentCell.ColumnNumber].playerCell = true;
         }
 
-        public Cell setStartCell(int currentRow, int currentCol)
+        //public Cell SetStartCell(int currentRow, int currentCol)
+        //{
+        //    Cell currentCell = this.theGrid[currentRow, currentCol];
+
+        //    if (currentCell.CurrentlyOccupied ==  false)
+        //    {
+        //        currentCell.playerCell = true;
+        //        return currentCell;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("ColumnNumber and row must be between 0-8");
+        //        return currentCell;
+        //    }
+        //}
+        public Cell SetCurrentCell(int currentRow, int currentCol)
         {
             Cell currentCell = this.theGrid[currentRow, currentCol];
-
-            if (currentCell.CurrentlyOccupied ==  false)
+            if (currentCell.CurrentlyOccupied)
             {
                 currentCell.playerCell = true;
                 return currentCell;
             }
             else
             {
-                Console.WriteLine("ColumnNumber and row must be between 0-8");
+                Console.WriteLine("Col and Row number must be between 0 - 8");
                 return currentCell;
             }
+
         }
 
         public Cell SetOccupiedPiece(int occupiedRow, int occupiedCol, Part piece)
@@ -384,9 +404,34 @@ namespace ChessBoardModel
             }
             else
             {
-                Console.WriteLine(occupiedCell.Piece);
+                Console.WriteLine("Col and Row number must be between 0 - 8");
                 return occupiedCell;
             }
+        }
+
+        public Cell SetNextMove(int nextRow, int nextCol, Cell lastCell)
+        {
+            Cell nextCell = theGrid[nextRow, nextCol];
+            //setting previous cell to no longer be the player cell
+            lastCell.playerCell = false;
+
+            // Checks if next cell is a legal move and there is a piece there
+            if (nextCell.LegalNextMove & nextCell.CurrentlyOccupied)
+            {
+                SetCurrentCell(nextRow, nextCol);
+                return nextCell;
+            }
+            else
+            {
+                Console.WriteLine("Illegal Move");
+                return nextCell;
+            }
+        }
+
+        public int moveCounter()
+        {
+            moveCount += 1;
+            return moveCount;
         }
     }
 }

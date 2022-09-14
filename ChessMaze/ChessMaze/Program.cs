@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,14 +14,17 @@ namespace ChessMaze
         static Board myBoard = new Board(8);
         static void Main(string[] args)
         {
-            // show empty board
-            //printBoard(myBoard);
+            myBoard.GameStart();
 
-            Cell currentCell = setCurrentCell(3, 3);
+            Cell currentCell = myBoard.SetCurrentCell(1, 0);
+
+            // Start the timer for the game
+            var timer = new Stopwatch();
+            timer.Start();
 
 
             // Set pieces on board
-            //myBoard.SetOccupiedPiece(1, 1, (Part)'r');
+            myBoard.SetOccupiedPiece(1, 0, (Part)'R');
             myBoard.SetOccupiedPiece(0, 7, (Part)'N');
             myBoard.SetOccupiedPiece(2, 6, (Part)'B');
             myBoard.SetOccupiedPiece(3, 7, (Part)'R');
@@ -28,15 +32,38 @@ namespace ChessMaze
             myBoard.SetOccupiedPiece(0, 4, (Part)'R');
             myBoard.SetOccupiedPiece(7, 7, (Part)'K');
 
-            myBoard.MarkNextLegalMoves(currentCell, Part.PlayerOnRook);
+            // Set the player at the start of the game
+            Console.WriteLine("Move count: {0}", myBoard.moveCount);
+
+            myBoard.MarkNextLegalMoves(currentCell, currentCell.Piece);
             printBoard(myBoard);
 
-            Console.ReadLine();
-        }
+            // Hardcoded first move
+            Cell nextMove = myBoard.SetNextMove(1, 3, currentCell);
+            myBoard.MarkNextLegalMoves(nextMove, nextMove.Piece);
 
-        private static Cell setCurrentCell(int currentRow, int currentCol)
-        {
-            return myBoard.theGrid[currentRow, currentCol];
+            myBoard.moveCounter();
+            Console.WriteLine("Move count: {0}", myBoard.moveCount);
+
+            //myBoard.MarkNextLegalMoves(nextMove, currentCell.Piece);
+
+            printBoard(myBoard);
+
+            //Cell nextMove1 = myBoard.SetNextMove(0, 4, currentCell);
+            //myBoard.MarkNextLegalMoves(nextMove1, nextMove1.Piece);
+
+            //printBoard(myBoard);
+
+            timer.Stop();
+
+            TimeSpan timeTaken = timer.Elapsed;
+            string time = timeTaken.ToString(@"m\:ss\.fff");
+
+            // Print the time taken
+            Console.WriteLine("Time Taken: {0}", time);
+
+
+            Console.ReadLine();
         }
 
         private static void printBoard(Board myBoard)

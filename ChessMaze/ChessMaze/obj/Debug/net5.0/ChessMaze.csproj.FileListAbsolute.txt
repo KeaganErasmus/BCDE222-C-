@@ -36,3 +36,10 @@ C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\Ches
 C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ref\ChessMaze.dll
 C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.pdb
 C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.genruntimeconfig.cache
+D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.AssemblyReference.cache
+D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.AssemblyInfoInputs.cache
+D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.AssemblyInfo.cs
+D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.CoreCompileInputs.cache
+D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.dll
+D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.pdb
