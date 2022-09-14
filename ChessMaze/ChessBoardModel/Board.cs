@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,8 @@ namespace ChessBoardModel
     {
         public int Size { get; set; }
         public int moveCount;
+
+        public Stopwatch timer = new();
 
         public Cell[,] theGrid { get; set; }
 
@@ -30,6 +33,27 @@ namespace ChessBoardModel
             }
         }
 
+        public int MoveCounter()
+        {
+            moveCount += 1;
+            return moveCount;
+        }
+
+        public void StartTimer()
+        {
+            timer.Start();
+        }
+
+        public void StopTimer()
+        {
+
+            TimeSpan timeTaken = timer.Elapsed;
+            string time = timeTaken.ToString(@"m\:ss\.fff");
+
+            // Print the time taken
+            Console.WriteLine("Time Taken: {0}", time);
+        }
+
         public void GameStart()
         {
             // reset the board
@@ -41,6 +65,12 @@ namespace ChessBoardModel
                     theGrid[i, j].LegalNextMove     = false;
                 }
             }
+        }
+
+        public void ResetGame()
+        {
+            GameStart();
+            ResetAllLegalMoves();
         }
 
         public void ResetAllLegalMoves()
@@ -328,12 +358,6 @@ namespace ChessBoardModel
                 Console.WriteLine("Illegal Move");
                 return nextCell;
             }
-        }
-
-        public int moveCounter()
-        {
-            moveCount += 1;
-            return moveCount;
         }
     }
 }
