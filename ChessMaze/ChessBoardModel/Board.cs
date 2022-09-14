@@ -32,13 +32,24 @@ namespace ChessBoardModel
 
         public void GameStart()
         {
-            // clears the board
+            // reset the board
             for (int i = 0; i < Size; i++)
             {
                 for (int j = 0; j < Size; j++)
                 {
                     theGrid[i, j].CurrentlyOccupied = false;
                     theGrid[i, j].LegalNextMove     = false;
+                }
+            }
+        }
+
+        public void ResetAllLegalMoves()
+        {
+            for (int x = 0; x < Size; x++)
+            {
+                for (int y = 0; y < Size; y++)
+                {
+                    theGrid[x, y].LegalNextMove = false;
                 }
             }
         }
@@ -115,17 +126,17 @@ namespace ChessBoardModel
 
         protected void KingMove(Cell currentCell)
         {
-            int [,] targetPositions = new int[,]
-{
-                        {  1, -1 },
-                        {  1,  1 },
-                        {  1,  0 },
-                        { -1, -1 },
-                        { -1,  1 },
-                        { -1,  0 },
-                        {  0,  1 },
-                        {  0, -1 }
-};
+            int[,] targetPositions = new int[,]
+            {
+                {  1, -1 },
+                {  1,  1 },
+                {  1,  0 },
+                { -1, -1 },
+                { -1,  1 },
+                { -1,  0 },
+                {  0,  1 },
+                {  0, -1 }
+            };
 
 
             for (var i = 0; i < targetPositions.GetLength(0); ++i)
@@ -213,7 +224,7 @@ namespace ChessBoardModel
         protected void KnightMove(Cell currentCell)
         {
             int[,] targetPositions = new int[,]
-               {
+                   {
                         {  2, -1 },
                         {  2,  1 },
                         {  1,  2 },
@@ -222,7 +233,7 @@ namespace ChessBoardModel
                         { -1, -2 },
                         { -2,  1 },
                         { -2, -1 }
-                };
+                   };
 
 
             for (var i = 0; i < targetPositions.GetLength(0); ++i)

@@ -40,19 +40,19 @@ namespace ChessMaze
 
             // Hardcoded first move
             Cell nextMove = myBoard.SetNextMove(1, 3, currentCell);
+            myBoard.ResetAllLegalMoves();
             myBoard.MarkNextLegalMoves(nextMove, nextMove.Piece);
 
             myBoard.moveCounter();
             Console.WriteLine("Move count: {0}", myBoard.moveCount);
 
-            //myBoard.MarkNextLegalMoves(nextMove, currentCell.Piece);
-
             printBoard(myBoard);
 
-            //Cell nextMove1 = myBoard.SetNextMove(0, 4, currentCell);
-            //myBoard.MarkNextLegalMoves(nextMove1, nextMove1.Piece);
+            Cell nextMove1 = myBoard.SetNextMove(0, 5, nextMove);
+            myBoard.ResetAllLegalMoves();
+            myBoard.MarkNextLegalMoves(nextMove1, nextMove1.Piece);
 
-            //printBoard(myBoard);
+            printBoard(myBoard);
 
             timer.Stop();
 
