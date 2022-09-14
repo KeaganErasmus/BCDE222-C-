@@ -43,241 +43,80 @@ namespace ChessBoardModel
             }
         }
 
-        public void MarkNextLegalMoves(Cell currentCell, Part chessPiece)
+        protected void RookMove(Cell currentCell)
         {
-            // display legal moves for each piece
-            switch (chessPiece)
+            // DOWN
+            for (int i = 1; i <= Size - currentCell.RowNumber; i++)
             {
-                case (Part)'N':
-                    int[,] targetPositions = new int[,]
+                // check if Down movement is valid
+                if (currentCell.RowNumber + i <= Size - 1)
+                {
+                    // check if next cell is occupied
+                    if (theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].CurrentlyOccupied)
                     {
-                        {  2, -1 },
-                        {  2,  1 },
-                        {  1,  2 },
-                        {  1, -2 },
-                        { -1,  2 },
-                        { -1, -2 },
-                        { -2,  1 },
-                        { -2, -1 }
-                    };
-
-
-                    for (var i = 0; i < targetPositions.GetLength(0); ++i)
-                    {
-                        if ((currentCell.RowNumber + targetPositions[i, 0] >= 0) & (currentCell.RowNumber + targetPositions[i, 0] < Size)
-                            & (currentCell.ColumnNumber + targetPositions[i, 1] >= 0) & (currentCell.ColumnNumber + targetPositions[i, 1] < Size))
-                        {
-                            theGrid[currentCell.RowNumber + targetPositions[i, 0], currentCell.ColumnNumber + targetPositions[i, 1]].LegalNextMove = true;
-                        }
+                        theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
+                        break;
                     }
+                    else
+                    {
+                        theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
+                    }
+                }
+            }
 
+            // LEFT
+            for (int j = 1; j < (currentCell.ColumnNumber + 1); j++)
+            {
+                // check if next cell is occupied - if so then set as legal and exit the for loop
+                if (theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j].CurrentlyOccupied)
+                {
+                    theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j].LegalNextMove = true;
                     break;
+                }
+                else
+                {
+                    theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j].LegalNextMove = true;
+                }
+            }
 
-                case (Part)'B':
-                    for (var i = 0; i < Size; ++i)
+            //  UP
+            for (int i = 1; i <= currentCell.RowNumber; i++)
+            {
+                // check if Up movement is valid
+                if (currentCell.RowNumber - i >= 0)
+                {
+                    // check if next cell is occupied
+                    if (theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber].CurrentlyOccupied)
                     {
-                        if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
-                            & (currentCell.ColumnNumber + i >= 0) & (currentCell.ColumnNumber + i < Size))
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].LegalNextMove = true;
-                            }
-                        }
+                        theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber].LegalNextMove = true;
+                        break;
                     }
-                    for (var i = 0; i < Size; ++i)
+                    else
                     {
-                        if ((currentCell.RowNumber - i >= 0) & (currentCell.RowNumber - i < Size)
-                            & (currentCell.ColumnNumber - i >= 0) & (currentCell.ColumnNumber - i < Size))
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].LegalNextMove = true;
-                            }
-                        }
+                        theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber].LegalNextMove = true;
                     }
-                    for (var i = 0; i < Size; ++i)
-                    {
-                        if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
-                            & (currentCell.ColumnNumber - i >= 0) & (currentCell.ColumnNumber - i < Size))
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].LegalNextMove = true;
-                            }
-                        }
-                    }
-                    for (var i = 0; i < Size; ++i)
-                    {
-                        if ((currentCell.RowNumber - i >= 0) & (currentCell.RowNumber - i < Size)
-                            & (currentCell.ColumnNumber + i >= 0) & (currentCell.ColumnNumber + i < Size))
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].LegalNextMove = true;
-                            }
-                        }
-                    }
+                }
+            }
+            //RIGHT
+            for (int j = 1; j < Size - currentCell.ColumnNumber; j++)
+            {
+                // check if next cell is occupied - if so then set as legal and exit the for loop
+                if (theGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].CurrentlyOccupied)
+                {
+                    theGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].LegalNextMove = true;
                     break;
+                }
+                else
+                {
+                    theGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].LegalNextMove = true;
+                }
+            }
+        }
 
-                case (Part)'Q':
-
-                    // Diagonal movement
-                    for (var i = 0; i < Size; ++i)
-                    {
-                        if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
-                            & (currentCell.ColumnNumber + i >= 0) & (currentCell.ColumnNumber + i < Size))
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].LegalNextMove = true;
-                            }
-                        }
-                    }
-                    for (var i = 0; i < Size; ++i)
-                    {
-                        if ((currentCell.RowNumber - i >= 0) & (currentCell.RowNumber - i < Size)
-                            & (currentCell.ColumnNumber - i >= 0) & (currentCell.ColumnNumber - i < Size))
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].LegalNextMove = true;
-                            }
-                        }
-                    }
-                    for (var i = 0; i < Size; ++i)
-                    {
-                        if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
-                            & (currentCell.ColumnNumber - i >= 0) & (currentCell.ColumnNumber - i < Size))
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].LegalNextMove = true;
-                            }
-                        }
-                    }
-                    for (var i = 0; i < Size; ++i)
-                    {
-                        if ((currentCell.RowNumber - i >= 0) & (currentCell.RowNumber - i < Size)
-                            & (currentCell.ColumnNumber + i >= 0) & (currentCell.ColumnNumber + i < Size))
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].LegalNextMove = true;
-                            }
-                        }
-                    }
-
-                    // Vertical and horizontal movement
-                    // left and down
-                    for (int i = 0; i < Size - currentCell.RowNumber; i++)
-                    {
-                        // check if next cell is occupied - if so then set as legal and exit the for loop
-                        if (theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].CurrentlyOccupied)
-                        {
-                            theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
-                            break;
-                        }
-                        else
-                        {
-                            theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
-                        }
-
-                        for (int j = 0; j < currentCell.ColumnNumber; j++)
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j - 1].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j - 1].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j - 1].LegalNextMove = true;
-                            }
-                        }
-                    }
-                    //  right and up
-                    for (int i = 0; i < currentCell.RowNumber; i++)
-                    {
-                        // check if next cell is occupied - if so then set as legal and exit the for loop
-                        if (theGrid[currentCell.RowNumber - i - 1, currentCell.ColumnNumber].CurrentlyOccupied)
-                        {
-                            theGrid[currentCell.RowNumber - i - 1, currentCell.ColumnNumber].LegalNextMove = true;
-                            break;
-                        }
-                        else
-                        {
-                            theGrid[currentCell.RowNumber - i - 1, currentCell.ColumnNumber].LegalNextMove = true;
-                        }
-
-                        for (int j = 0; j < Size - currentCell.ColumnNumber; j++)
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].LegalNextMove = true;
-                            }
-                        }
-                    }
-                    break;
-
-                case (Part)'K':
-                    targetPositions = new int[,]
-                    {
+        protected void KingMove(Cell currentCell)
+        {
+            int [,] targetPositions = new int[,]
+{
                         {  1, -1 },
                         {  1,  1 },
                         {  1,  0 },
@@ -286,96 +125,148 @@ namespace ChessBoardModel
                         { -1,  0 },
                         {  0,  1 },
                         {  0, -1 }
-                    };
+};
 
 
-                    for (var i = 0; i < targetPositions.GetLength(0); ++i)
+            for (var i = 0; i < targetPositions.GetLength(0); ++i)
+            {
+                if ((currentCell.RowNumber + targetPositions[i, 0] >= 0) & (currentCell.RowNumber + targetPositions[i, 0] < Size)
+                    & (currentCell.ColumnNumber + targetPositions[i, 1] >= 0) & (currentCell.ColumnNumber + targetPositions[i, 1] < Size))
+                {
+                    theGrid[currentCell.RowNumber + targetPositions[i, 0], currentCell.ColumnNumber + targetPositions[i, 1]].LegalNextMove = true;
+                }
+            }
+        }
+
+        protected void BishopMove(Cell currentCell)
+        {
+            for (var i = 0; i < Size; ++i)
+            {
+                if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
+                    & (currentCell.ColumnNumber + i >= 0) & (currentCell.ColumnNumber + i < Size))
+                {
+                    // check if next cell is occupied - if so then set as legal and exit the for loop
+                    if (theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].CurrentlyOccupied)
                     {
-                        if ((currentCell.RowNumber + targetPositions[i, 0] >= 0) & (currentCell.RowNumber + targetPositions[i, 0] < Size)
-                            & (currentCell.ColumnNumber + targetPositions[i, 1] >= 0) & (currentCell.ColumnNumber + targetPositions[i, 1] < Size))
-                        {
-                            theGrid[currentCell.RowNumber + targetPositions[i, 0], currentCell.ColumnNumber + targetPositions[i, 1]].LegalNextMove = true;
-                        }
+                        theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].LegalNextMove = true;
+                        break;
                     }
+                    else
+                    {
+                        theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].LegalNextMove = true;
+                    }
+                }
+            }
+            for (var i = 0; i < Size; ++i)
+            {
+                if ((currentCell.RowNumber - i >= 0) & (currentCell.RowNumber - i < Size)
+                    & (currentCell.ColumnNumber - i >= 0) & (currentCell.ColumnNumber - i < Size))
+                {
+                    // check if next cell is occupied - if so then set as legal and exit the for loop
+                    if (theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].CurrentlyOccupied)
+                    {
+                        theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].LegalNextMove = true;
+                        break;
+                    }
+                    else
+                    {
+                        theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].LegalNextMove = true;
+                    }
+                }
+            }
+            for (var i = 0; i < Size; ++i)
+            {
+                if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
+                    & (currentCell.ColumnNumber - i >= 0) & (currentCell.ColumnNumber - i < Size))
+                {
+                    // check if next cell is occupied - if so then set as legal and exit the for loop
+                    if (theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].CurrentlyOccupied)
+                    {
+                        theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].LegalNextMove = true;
+                        break;
+                    }
+                    else
+                    {
+                        theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].LegalNextMove = true;
+                    }
+                }
+            }
+            for (var i = 0; i < Size; ++i)
+            {
+                if ((currentCell.RowNumber - i >= 0) & (currentCell.RowNumber - i < Size)
+                    & (currentCell.ColumnNumber + i >= 0) & (currentCell.ColumnNumber + i < Size))
+                {
+                    // check if next cell is occupied - if so then set as legal and exit the for loop
+                    if (theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].CurrentlyOccupied)
+                    {
+                        theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].LegalNextMove = true;
+                        break;
+                    }
+                    else
+                    {
+                        theGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].LegalNextMove = true;
+                    }
+                }
+            }
+        }
+
+        protected void KnightMove(Cell currentCell)
+        {
+            int[,] targetPositions = new int[,]
+               {
+                        {  2, -1 },
+                        {  2,  1 },
+                        {  1,  2 },
+                        {  1, -2 },
+                        { -1,  2 },
+                        { -1, -2 },
+                        { -2,  1 },
+                        { -2, -1 }
+                };
+
+
+            for (var i = 0; i < targetPositions.GetLength(0); ++i)
+            {
+                if ((currentCell.RowNumber + targetPositions[i, 0] >= 0) & (currentCell.RowNumber + targetPositions[i, 0] < Size)
+                    & (currentCell.ColumnNumber + targetPositions[i, 1] >= 0) & (currentCell.ColumnNumber + targetPositions[i, 1] < Size))
+                {
+                    theGrid[currentCell.RowNumber + targetPositions[i, 0], currentCell.ColumnNumber + targetPositions[i, 1]].LegalNextMove = true;
+                }
+            }
+        }
+
+        public void MarkNextLegalMoves(Cell currentCell, Part chessPiece)
+        {
+            // display legal moves for each piece
+            switch (chessPiece)
+            {
+                case (Part)'N':
+                    KnightMove(currentCell);
+                    break;
+
+                case (Part)'B':
+                    BishopMove(currentCell);
+                    break;
+
+                case (Part)'Q':
+                    // UP AND DOWN
+                    RookMove(currentCell);
+
+                    // D
+                    BishopMove(currentCell);
+                    break;
+
+                case (Part)'K':
+                    KingMove(currentCell);
                     break;
 
                 case (Part)'R':
-                    // left and down
-                    for (int i = 0; i < Size - currentCell.RowNumber; i++)
-                    {
-                        // check if next cell is occupied - if so then set as legal and exit the for loop
-                        if (theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].CurrentlyOccupied)
-                        {
-                            theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
-                            break;
-                        }
-                        else
-                        {
-                            theGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
-                        }
-
-                        for (int j = 0; j < currentCell.ColumnNumber; j++)
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j - 1].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j - 1].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber, currentCell.ColumnNumber - j - 1].LegalNextMove = true;
-                            }
-                        }
-                    }
-                    //  right and up
-                    for (int i = 0; i < currentCell.RowNumber; i++)
-                    {
-                        // check if next cell is occupied - if so then set as legal and exit the for loop
-                        if (theGrid[currentCell.RowNumber - i - 1, currentCell.ColumnNumber].CurrentlyOccupied)
-                        {
-                            theGrid[currentCell.RowNumber - i - 1, currentCell.ColumnNumber].LegalNextMove = true;
-                            break;
-                        }
-                        else
-                        {
-                            theGrid[currentCell.RowNumber - i - 1, currentCell.ColumnNumber].LegalNextMove = true;
-                        }
-
-                        for (int j = 0; j < Size - currentCell.ColumnNumber; j++)
-                        {
-                            // check if next cell is occupied - if so then set as legal and exit the for loop
-                            if (theGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].CurrentlyOccupied)
-                            {
-                                theGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].LegalNextMove = true;
-                                break;
-                            }
-                            else
-                            {
-                                theGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].LegalNextMove = true;
-                            }
-                        }
-                    }
+                    RookMove(currentCell);
                     break;
             }
             theGrid[currentCell.RowNumber, currentCell.ColumnNumber].playerCell = true;
         }
 
-        //public Cell SetStartCell(int currentRow, int currentCol)
-        //{
-        //    Cell currentCell = this.theGrid[currentRow, currentCol];
-
-        //    if (currentCell.CurrentlyOccupied ==  false)
-        //    {
-        //        currentCell.playerCell = true;
-        //        return currentCell;
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("ColumnNumber and row must be between 0-8");
-        //        return currentCell;
-        //    }
-        //}
         public Cell SetCurrentCell(int currentRow, int currentCol)
         {
             Cell currentCell = this.theGrid[currentRow, currentCol];
@@ -386,7 +277,7 @@ namespace ChessBoardModel
             }
             else
             {
-                Console.WriteLine("Col and Row number must be between 0 - 8");
+                Console.WriteLine("ColumnNumber and RowNumber number must be between 0 - 8");
                 return currentCell;
             }
 
@@ -404,7 +295,7 @@ namespace ChessBoardModel
             }
             else
             {
-                Console.WriteLine("Col and Row number must be between 0 - 8");
+                Console.WriteLine("ColumnNumber and RowNumber number must be between 0 - 8");
                 return occupiedCell;
             }
         }
