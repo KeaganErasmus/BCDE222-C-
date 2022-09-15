@@ -15,6 +15,7 @@ namespace ChessMaze
         static void Main(string[] args)
         {
             myBoard.GameStart();
+            myBoard.MoveCounter();
 
             // Set the player at the start of the game
             Cell currentCell = myBoard.SetCurrentCell(1, 0);
@@ -48,18 +49,16 @@ namespace ChessMaze
 
             myBoard.StopTimer();
 
-            //myBoard.ResetGame();
-            //FirstLevel();
-            //printBoard(myBoard);
-
-
             Console.ReadLine();
         }
 
         private static void FirstLevel()
         {
-            // Set pieces on board for the first level
+
+            // Sets the first piece and this piece is what the player will start as
             myBoard.SetOccupiedPiece(1, 0, (Part)'R');
+
+            // Set pieces on board for the first level
             myBoard.SetOccupiedPiece(0, 7, (Part)'N');
             myBoard.SetOccupiedPiece(2, 6, (Part)'B');
             myBoard.SetOccupiedPiece(3, 7, (Part)'R');

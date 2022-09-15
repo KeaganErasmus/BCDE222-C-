@@ -181,7 +181,7 @@ namespace ChessBoardModel
 
         protected void BishopMove(Cell currentCell)
         {
-            for (var i = 0; i < Size; ++i)
+            for (var i = 1; i < Size; ++i)
             {
                 if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
                     & (currentCell.ColumnNumber + i >= 0) & (currentCell.ColumnNumber + i < Size))
@@ -198,7 +198,7 @@ namespace ChessBoardModel
                     }
                 }
             }
-            for (var i = 0; i < Size; ++i)
+            for (var i = 1; i < Size; ++i)
             {
                 if ((currentCell.RowNumber - i >= 0) & (currentCell.RowNumber - i < Size)
                     & (currentCell.ColumnNumber - i >= 0) & (currentCell.ColumnNumber - i < Size))
@@ -215,7 +215,7 @@ namespace ChessBoardModel
                     }
                 }
             }
-            for (var i = 0; i < Size; ++i)
+            for (var i = 1; i < Size; ++i)
             {
                 if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
                     & (currentCell.ColumnNumber - i >= 0) & (currentCell.ColumnNumber - i < Size))
@@ -232,7 +232,7 @@ namespace ChessBoardModel
                     }
                 }
             }
-            for (var i = 0; i < Size; ++i)
+            for (var i = 1; i < Size; ++i)
             {
                 if ((currentCell.RowNumber - i >= 0) & (currentCell.RowNumber - i < Size)
                     & (currentCell.ColumnNumber + i >= 0) & (currentCell.ColumnNumber + i < Size))
@@ -290,11 +290,11 @@ namespace ChessBoardModel
                     break;
 
                 case (Part)'Q':
+                    // Diagonal
+                    BishopMove(currentCell);
+
                     // UP AND DOWN
                     RookMove(currentCell);
-
-                    // D
-                    BishopMove(currentCell);
                     break;
 
                 case (Part)'K':
