@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj": {}
+    "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj": {}
   },
   "projects": {
-    "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj": {
+    "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj",
+        "projectUniqueName": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
         "projectName": "ChessMaze",
-        "projectPath": "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj",
+        "projectPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
         "packagesPath": "C:\\Users\\Keagan\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\app\\TestApp\\ChessMaze\\obj\\",
+        "outputPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Keagan\\AppData\\Roaming\\NuGet\\NuGet.Config",
