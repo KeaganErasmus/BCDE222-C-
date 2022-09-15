@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "13H7Fc6O23t1GM+PvfdRAPfrcyHyeB3RTdWkzEUk5NaxkugkEtUq5KSbHqW/coz81lC0k5NrRhSxTbA88nAmtw==",
+  "dgSpecHash": "MgCpCfHdESiT1S557m48v2/h66wswMPYZbvmlY/yTIM7uahlAptecK7/VlOb6vNgJkY1bphWuyGW78PTXYeAvQ==",
   "success": true,
-  "projectFilePath": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
+  "projectFilePath": "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

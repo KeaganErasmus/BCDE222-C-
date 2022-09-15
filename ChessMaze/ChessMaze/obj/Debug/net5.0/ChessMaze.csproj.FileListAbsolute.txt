@@ -1,45 +1,32 @@
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.AssemblyReference.cache
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.AssemblyInfoInputs.cache
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.AssemblyInfo.cs
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.CoreCompileInputs.cache
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.exe
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.deps.json
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.runtimeconfig.json
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.runtimeconfig.dev.json
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.dll
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ref\ChessMaze.dll
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.pdb
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessBoardModel.dll
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessBoardModel.pdb
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.CopyComplete
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.dll
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ref\ChessMaze.dll
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.pdb
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\Desktop\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.genruntimeconfig.cache
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.exe
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.deps.json
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.runtimeconfig.json
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.runtimeconfig.dev.json
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.dll
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ref\ChessMaze.dll
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessMaze.pdb
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessBoardModel.dll
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\bin\Debug\net5.0\ChessBoardModel.pdb
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.AssemblyReference.cache
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.AssemblyInfoInputs.cache
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.AssemblyInfo.cs
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.CoreCompileInputs.cache
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.CopyComplete
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.dll
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ref\ChessMaze.dll
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.pdb
-C:\Users\kje0074\OneDrive - Ara Institute of Canterbury\aY2 S2\BCDE222-main\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.genruntimeconfig.cache
-D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.AssemblyReference.cache
-D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.GeneratedMSBuildEditorConfig.editorconfig
-D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.AssemblyInfoInputs.cache
-D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.AssemblyInfo.cs
-D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.CoreCompileInputs.cache
-D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.dll
-D:\C#\BCDE222\ChessMaze\ChessMaze\obj\Debug\net5.0\ChessMaze.pdb
+D:\C#\app\TestApp\TestApp\obj\Debug\net5.0\ChessMaze.csproj.AssemblyReference.cache
+D:\C#\app\TestApp\TestApp\obj\Debug\net5.0\ChessMaze.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\app\TestApp\TestApp\obj\Debug\net5.0\ChessMaze.AssemblyInfoInputs.cache
+D:\C#\app\TestApp\TestApp\obj\Debug\net5.0\ChessMaze.AssemblyInfo.cs
+D:\C#\app\TestApp\TestApp\obj\Debug\net5.0\ChessMaze.csproj.CoreCompileInputs.cache
+D:\C#\app\TestApp\TestApp\bin\Debug\net5.0\ChessMaze.exe
+D:\C#\app\TestApp\TestApp\bin\Debug\net5.0\ChessMaze.deps.json
+D:\C#\app\TestApp\TestApp\bin\Debug\net5.0\ChessMaze.runtimeconfig.json
+D:\C#\app\TestApp\TestApp\bin\Debug\net5.0\ChessMaze.runtimeconfig.dev.json
+D:\C#\app\TestApp\TestApp\bin\Debug\net5.0\ChessMaze.dll
+D:\C#\app\TestApp\TestApp\bin\Debug\net5.0\ChessMaze.pdb
+D:\C#\app\TestApp\TestApp\obj\Debug\net5.0\ChessMaze.dll
+D:\C#\app\TestApp\TestApp\obj\Debug\net5.0\refint\ChessMaze.dll
+D:\C#\app\TestApp\TestApp\obj\Debug\net5.0\ChessMaze.pdb
+D:\C#\app\TestApp\TestApp\obj\Debug\net5.0\ChessMaze.genruntimeconfig.cache
+D:\C#\app\TestApp\TestApp\obj\Debug\net5.0\ref\ChessMaze.dll
+D:\C#\app\TestApp\ChessMaze\bin\Debug\net5.0\ChessMaze.exe
+D:\C#\app\TestApp\ChessMaze\bin\Debug\net5.0\ChessMaze.deps.json
+D:\C#\app\TestApp\ChessMaze\bin\Debug\net5.0\ChessMaze.runtimeconfig.json
+D:\C#\app\TestApp\ChessMaze\bin\Debug\net5.0\ChessMaze.runtimeconfig.dev.json
+D:\C#\app\TestApp\ChessMaze\bin\Debug\net5.0\ChessMaze.dll
+D:\C#\app\TestApp\ChessMaze\bin\Debug\net5.0\ChessMaze.pdb
+D:\C#\app\TestApp\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.AssemblyReference.cache
+D:\C#\app\TestApp\ChessMaze\obj\Debug\net5.0\ChessMaze.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\app\TestApp\ChessMaze\obj\Debug\net5.0\ChessMaze.AssemblyInfoInputs.cache
+D:\C#\app\TestApp\ChessMaze\obj\Debug\net5.0\ChessMaze.AssemblyInfo.cs
+D:\C#\app\TestApp\ChessMaze\obj\Debug\net5.0\ChessMaze.csproj.CoreCompileInputs.cache
+D:\C#\app\TestApp\ChessMaze\obj\Debug\net5.0\ChessMaze.dll
+D:\C#\app\TestApp\ChessMaze\obj\Debug\net5.0\refint\ChessMaze.dll
+D:\C#\app\TestApp\ChessMaze\obj\Debug\net5.0\ChessMaze.pdb
+D:\C#\app\TestApp\ChessMaze\obj\Debug\net5.0\ChessMaze.genruntimeconfig.cache
+D:\C#\app\TestApp\ChessMaze\obj\Debug\net5.0\ref\ChessMaze.dll

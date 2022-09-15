@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
-      "ChessBoardModel/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/ChessBoardModel.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ChessBoardModel.dll": {}
-        }
-      }
-    }
+    "net5.0": {}
   },
-  "libraries": {
-    "ChessBoardModel/1.0.0": {
-      "type": "project",
-      "path": "../ChessBoardModel/ChessBoardModel.csproj",
-      "msbuildProject": "../ChessBoardModel/ChessBoardModel.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": [
-      "ChessBoardModel >= 1.0.0"
-    ]
+    "net5.0": []
   },
   "packageFolders": {
     "C:\\Users\\Keagan\\.nuget\\packages\\": {}
@@ -32,31 +13,27 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
+      "projectUniqueName": "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj",
       "projectName": "ChessMaze",
-      "projectPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
+      "projectPath": "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj",
       "packagesPath": "C:\\Users\\Keagan\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\obj\\",
+      "outputPath": "D:\\C#\\app\\TestApp\\ChessMaze\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Keagan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "projectReferences": {
-            "D:\\C#\\BCDE222\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj": {
-              "projectPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj"
-            }
-          }
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -66,8 +43,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "imports": [
           "net461",
           "net462",

@@ -9,13 +9,13 @@ namespace ChessBoardModel
 {
     public class Board
     {
-        public int Size { get; set; }
         public int moveCount;
+        public int Size { get; set; }
+        public Cell[,] theGrid { get; set; }
+        public Cell playerCell { get; set; }
+        public Cell finalCell { get; set; }
 
         public Stopwatch timer = new();
-
-        public Cell[,] theGrid { get; set; }
-
         public Board(int s)
         {
             // Initial board size

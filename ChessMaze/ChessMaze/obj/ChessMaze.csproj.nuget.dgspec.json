@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj": {}
+    "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj": {}
   },
   "projects": {
-    "D:\\C#\\BCDE222\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj": {
+    "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\BCDE222\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj",
-        "projectName": "ChessBoardModel",
-        "projectPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj",
+        "projectUniqueName": "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj",
+        "projectName": "ChessMaze",
+        "projectPath": "D:\\C#\\app\\TestApp\\ChessMaze\\ChessMaze.csproj",
         "packagesPath": "C:\\Users\\Keagan\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessBoardModel\\obj\\",
+        "outputPath": "D:\\C#\\app\\TestApp\\ChessMaze\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Keagan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -37,66 +37,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
-        "projectName": "ChessMaze",
-        "projectPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\ChessMaze.csproj",
-        "packagesPath": "C:\\Users\\Keagan\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessMaze\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Keagan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "D:\\C#\\BCDE222\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj": {
-                "projectPath": "D:\\C#\\BCDE222\\ChessMaze\\ChessBoardModel\\ChessBoardModel.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",
