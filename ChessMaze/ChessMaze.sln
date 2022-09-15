@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessMaze", "ChessMaze\ChessMaze.csproj", "{D3F0D2B3-8E1E-4675-BE9A-C7D50A9E777F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessBoardModel", "ChessBoardModel\ChessBoardModel.csproj", "{6E6006AE-610B-4018-A216-D3C0DA3C01E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessBoardModel", "ChessBoardModel\ChessBoardModel.csproj", "{6E6006AE-610B-4018-A216-D3C0DA3C01E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessMazeTest", "ChessMazeTest\ChessMazeTest.csproj", "{782D19D1-922C-4B53-8888-8C873FC1D1DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6E6006AE-610B-4018-A216-D3C0DA3C01E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E6006AE-610B-4018-A216-D3C0DA3C01E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E6006AE-610B-4018-A216-D3C0DA3C01E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{782D19D1-922C-4B53-8888-8C873FC1D1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{782D19D1-922C-4B53-8888-8C873FC1D1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{782D19D1-922C-4B53-8888-8C873FC1D1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{782D19D1-922C-4B53-8888-8C873FC1D1DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
