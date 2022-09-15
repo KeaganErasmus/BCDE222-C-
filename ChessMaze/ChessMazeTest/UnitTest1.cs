@@ -44,12 +44,7 @@ namespace ChessMazeTest
             myBoard.SetOccupiedPiece(1, 0, (Part)'R');
 
             // Set pieces on board for the first level
-            myBoard.SetOccupiedPiece(0, 7, (Part)'N');
-            myBoard.SetOccupiedPiece(2, 6, (Part)'B');
-            myBoard.SetOccupiedPiece(3, 7, (Part)'R');
             myBoard.SetOccupiedPiece(1, 3, (Part)'K');
-            myBoard.SetOccupiedPiece(0, 4, (Part)'R');
-            myBoard.SetOccupiedPiece(7, 7, (Part)'K');
 
             Console.WriteLine("Move count: {0}", myBoard.moveCount);
 
