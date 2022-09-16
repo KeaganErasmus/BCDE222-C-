@@ -11,6 +11,7 @@ namespace ChessMaze
     {
         static Board myBoard = new(8);
         public int moveCount;
+
         public int GetMoveCount()
         {
             moveCount += 1;
@@ -61,13 +62,12 @@ namespace ChessMaze
             Console.WriteLine(moveCount);
             Program.printBoard(myBoard);
             GetMoveCount();
-            //myBoard.MoveCounter();
             Console.WriteLine("Number of moves {0}", moveCount);
+            Console.WriteLine("");
 
             // If not finished prompt for next move
             if (!IsFinished())
             {
-                // Acting as a temp reset button
                 Console.WriteLine("Press R to Restart Or any other key to continue or Press enter to continue");
                 Console.WriteLine("Press U to undo");
                 string r = Console.ReadLine();
@@ -84,7 +84,7 @@ namespace ChessMaze
                     Move();
                 }
             }
-            // If finished display message, time taken, moves taken and close program
+            // game is finished
             else
             {
                 Console.WriteLine("You Win!");
@@ -106,7 +106,7 @@ namespace ChessMaze
 
             myBoard.StartTimer();
 
-            // Set pieces on board
+            // load pieces onto the board
             Load();
 
             Cell currentCell = myBoard.playerCell;
