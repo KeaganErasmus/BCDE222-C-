@@ -46,7 +46,7 @@ namespace ChessMaze
             timer.Start();
         }
 
-        public void StopTimer()
+        public string StopTimer()
         {
 
             TimeSpan timeTaken = timer.Elapsed;
@@ -54,6 +54,7 @@ namespace ChessMaze
 
             // Print the time taken
             Console.WriteLine("Time Taken: {0}", time);
+            return time;
         }
 
         public void GameStart()

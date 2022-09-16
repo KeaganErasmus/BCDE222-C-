@@ -34,10 +34,10 @@ namespace ChessMaze
         {
             myBoard.SetLevelName("Level1");
             Console.WriteLine(myBoard.levelName);
-            myBoard.SetCurrentCell(1, 0);
+            myBoard.SetCurrentCell(1, 3);
             myBoard.WinCell(7,7);
             // Sets the first piece and this piece is what the player will start as
-            myBoard.SetOccupiedPiece(1, 0, (Part)'R');
+            myBoard.SetOccupiedPiece(1, 3, (Part)'R');
 
             // Set pieces on board for the first level
             myBoard.SetOccupiedPiece(0, 7, (Part)'N');
@@ -48,7 +48,7 @@ namespace ChessMaze
             myBoard.SetOccupiedPiece(7, 7, (Part)'K');
         }
 
-        public void Move()
+        public void SelectMove()
         {
             Console.WriteLine("Enter next Row");
             int nextRow = int.Parse(Console.ReadLine());
@@ -56,15 +56,11 @@ namespace ChessMaze
             Console.WriteLine("Enter next Column");
             int nextCol = int.Parse(Console.ReadLine());
 
-            Cell nextCell = myBoard.SetNextMove(nextRow, nextCol);
-            myBoard.ResetAllLegalMoves();
-            myBoard.MarkNextLegalMoves(nextCell, nextCell.Piece);
-            Console.WriteLine(moveCount);
-            Program.printBoard(myBoard);
-            GetMoveCount();
-            Console.WriteLine("Number of moves {0}", moveCount);
-            Console.WriteLine("");
+            Move(nextRow, nextCol);
+        }
 
+        public void SetMove()
+        {
             // If not finished prompt for next move
             if (!IsFinished())
             {
@@ -75,13 +71,13 @@ namespace ChessMaze
                 {
                     Restart();
                 }
-                else if (r == "u" || r =="U")
+                else if (r == "u" || r == "U")
                 {
                     Undo();
                 }
                 else
                 {
-                    Move();
+                    SelectMove();
                 }
             }
             // game is finished
@@ -92,6 +88,24 @@ namespace ChessMaze
                 Console.WriteLine("Press any key to exit");
                 Console.ReadKey();
             }
+        }
+
+        public void Move(int nextRow , int nextCol)
+        {
+            Cell nextCell = myBoard.SetNextMove(nextRow, nextCol);
+
+            // Calc next legal moves
+            myBoard.MarkNextLegalMoves(nextCell, nextCell.Piece);
+
+            // Increase move count by 1
+            GetMoveCount();
+
+            // Display board
+            Program.printBoard(myBoard);
+
+            //Display Movecount
+            GetMoveCount();
+            Console.WriteLine("");
         }
 
         public void Restart()
@@ -115,9 +129,17 @@ namespace ChessMaze
             myBoard.MarkNextLegalMoves(currentCell, currentCell.Piece);
 
             // Display board
-            Program.printBoard(myBoard);
+            //Program.printBoard(myBoard);
+        }
 
-            Move();
+        public Cell GetPlayerCell()
+        {
+            return myBoard.playerCell;
+        }
+
+        public Cell GetFinalCell()
+        {
+            return myBoard.finishCell;
         }
 
         public void Undo()
@@ -130,8 +152,6 @@ namespace ChessMaze
             Console.WriteLine("Number of moves {0}", moveCount);
 
             Program.printBoard(myBoard);
-
-            Move();
         }
     }
 }
