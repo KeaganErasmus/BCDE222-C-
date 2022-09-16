@@ -16,6 +16,8 @@ namespace ChessMaze
         public Cell finishCell { get; set; }
         public Cell lastCell { get; set; }
 
+        public string levelName;
+
         public Stopwatch timer = new();
         public Board(int s)
         {
@@ -34,6 +36,11 @@ namespace ChessMaze
             }
         }
 
+        public string SetLevelName(string name)
+        {
+            levelName = name;
+            return levelName;
+        }
         public void StartTimer()
         {
             timer.Start();

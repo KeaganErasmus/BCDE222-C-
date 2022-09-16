@@ -31,6 +31,8 @@ namespace ChessMaze
 
         public void Load()
         {
+            myBoard.SetLevelName("Level1");
+            Console.WriteLine(myBoard.levelName);
             myBoard.SetCurrentCell(1, 0);
             myBoard.WinCell(7,7);
             // Sets the first piece and this piece is what the player will start as
