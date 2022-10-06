@@ -18,28 +18,38 @@ namespace Assessment1
 
             #region Syntax Features method calls PART A
             //1 Selection statements
+            Console.WriteLine("1-Selection statements");
             SelectionStatement(45);
+            Console.WriteLine("");
 
             //2 Iteration statements
+            Console.WriteLine("2-Iteration Statements");
             IterationStatement();
+            Console.WriteLine("");
 
             //3 Constants
+            Console.WriteLine("3-Constants");
             Constants();
+            Console.WriteLine("");
 
             //4 Arrays
+            Console.WriteLine("4-Arrays");
             Arrays();
 
             //5 Classes//9 Constructors//25 Properties
+            Console.WriteLine("5-Classes 9-Constructors 25-Properties");
             var person1 = new Person("Keagan", "Erasmus");
             Console.WriteLine(person1);
             Console.WriteLine("");
 
             //6 Access modifiers//7 Fields//8 Readonly
+            Console.WriteLine("6-Access modifiers 7-Fields 8-Readonly");
             var tric1 = new Tricycle();
             Console.WriteLine(tric1.Wheels);
             Console.WriteLine("");
 
             //10 Passing by value//24 Static
+            Console.WriteLine("10-Passing by value 24-Static");
             int n = 5;
             System.Console.WriteLine("The value before calling the method: {0}", n);
             PassingByValue(n);  // Passing the variable by value.
@@ -47,31 +57,37 @@ namespace Assessment1
             Console.WriteLine("");
 
             //11 Passing by refrence
+            Console.WriteLine("11-Passing by reference");
             int m = 5;
-            System.Console.WriteLine("The value before calling the method: {0}", n);
+            System.Console.WriteLine("The value before calling the method: {0}", m);
             PassingByRefrence(ref m);  // Passing the variable by reference.
-            System.Console.WriteLine("The value after calling the method: {0}", n);
+            System.Console.WriteLine("The value after calling the method: {0}", m);
             Console.WriteLine("");
 
             //12 Expression body definitions =>
+            Console.WriteLine("12-Expression body definitions =>");
             var location = new Location("ChristChurch");
             Console.WriteLine(location.Name);
             Console.WriteLine("");
 
             //13 Lambda expressions
+            Console.WriteLine("13-Lambda expression");
             Func<int, int> square = x => x * x;
             Console.WriteLine(square(5));
             Console.WriteLine("");
 
             //14 Generic Methods
+            Console.WriteLine("14-Generic Methods");
             GenericMethods();
             Console.WriteLine("");
 
             //15 Interfaces//16 Inheritance
+            Console.WriteLine("15-Interfaces 16-Inheritance");
             Cow myCow = new();
             myCow.animalSound();
 
             //17 Virtual 
+            Console.WriteLine("17-Virtual");
             double r = 3.0, h = 5.0;
             Shape l = new Cylinder(r, h);
             // Display results.
@@ -79,11 +95,13 @@ namespace Assessment1
             Console.WriteLine("");
 
             //18 Overload
+            Console.WriteLine("18-Overload");
             Console.WriteLine(Add(1, 2));
             Console.WriteLine(Add(3, 4, 5));
             Console.WriteLine("");
 
             //19 Override//22 Base
+            Console.WriteLine("19-Override 22-Base");
             var employee1 = new SalesEmployee("Alice", 1000, 500);
             var employee2 = new Employee("Bob", 1200);
             Console.WriteLine($"Employee1 {employee1.Name} earned: {employee1.CalculatePay()}");
@@ -91,12 +109,14 @@ namespace Assessment1
             Console.WriteLine("");
 
             //20 Abstract Classes and Abstract Class Members
+            Console.WriteLine("20-Abstract Classes and Abstract Class Members");
             var o = new DerivedClass();
             o.AbstractMethod();
             Console.WriteLine($"x = {o.X}, y = {o.Y}");
             Console.WriteLine("");
 
             //21 New Modifier//23 Sealed Classes and Sealed Class Members
+            Console.WriteLine("21-New Modifier 23-Sealed Classes and Sealed Class Members");
             // Display the new value of x:
             Console.WriteLine(DerivedC.x);
             // Display the hidden value of x:
@@ -106,6 +126,7 @@ namespace Assessment1
             Console.WriteLine("");
 
             //26 $ - string interpolation
+            Console.WriteLine("26-String interpolation");
             string name = "Keagan";
             var date = DateTime.Now;
             Console.WriteLine($"Hello, {name}! Today is {date.DayOfWeek}, it's {date:HH:mm} now.");
