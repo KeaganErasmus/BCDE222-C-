@@ -12,9 +12,9 @@ namespace Assessment1
         public const double DaysPerWeek = (double)Days / (double)Weeks;
         public const double DaysPerMonth = (double)Days / (double)Months;
 
+
         static void Main(string[] args)
         {
-
 
             #region Syntax Features method calls PART A
             //1 Selection statements
@@ -29,7 +29,7 @@ namespace Assessment1
             //4 Arrays
             Arrays();
 
-            //5 Classes//9 Constructors
+            //5 Classes//9 Constructors//25 Properties
             var person1 = new Person("Keagan", "Erasmus");
             Console.WriteLine(person1);
             Console.WriteLine("");
@@ -39,7 +39,7 @@ namespace Assessment1
             Console.WriteLine(tric1.Wheels);
             Console.WriteLine("");
 
-            //10 Passing by value
+            //10 Passing by value//24 Static
             int n = 5;
             System.Console.WriteLine("The value before calling the method: {0}", n);
             PassingByValue(n);  // Passing the variable by value.
@@ -83,7 +83,7 @@ namespace Assessment1
             Console.WriteLine(Add(3, 4, 5));
             Console.WriteLine("");
 
-            //19 Override
+            //19 Override//22 Base
             var employee1 = new SalesEmployee("Alice", 1000, 500);
             var employee2 = new Employee("Bob", 1200);
             Console.WriteLine($"Employee1 {employee1.Name} earned: {employee1.CalculatePay()}");
@@ -94,6 +94,22 @@ namespace Assessment1
             var o = new DerivedClass();
             o.AbstractMethod();
             Console.WriteLine($"x = {o.X}, y = {o.Y}");
+            Console.WriteLine("");
+
+            //21 New Modifier//23 Sealed Classes and Sealed Class Members
+            // Display the new value of x:
+            Console.WriteLine(DerivedC.x);
+            // Display the hidden value of x:
+            Console.WriteLine(BaseC.x);
+            // Display the unhidden member y:
+            Console.WriteLine(BaseC.y);
+            Console.WriteLine("");
+
+            //26 $ - string interpolation
+            string name = "Keagan";
+            var date = DateTime.Now;
+            Console.WriteLine($"Hello, {name}! Today is {date.DayOfWeek}, it's {date:HH:mm} now.");
+            Console.WriteLine("");
             #endregion
 
 
@@ -282,7 +298,6 @@ namespace Assessment1
                 return _basepay;
             }
         }
-
         // Derive a new class from Employee.
         public class SalesEmployee : Employee
         {
@@ -340,6 +355,17 @@ namespace Assessment1
                     return _y + 10;
                 }
             }
+        }
+
+        public class BaseC
+        {
+            public static int x = 55;
+            public static int y = 22;
+        }
+        public class DerivedC : BaseC
+        {
+            // Hide field 'x'.
+            new public static int x = 100;
         }
     }
 }
