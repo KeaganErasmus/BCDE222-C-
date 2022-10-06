@@ -129,7 +129,7 @@ namespace ChessMaze
             myBoard.MarkNextLegalMoves(currentCell, currentCell.Piece);
 
             // Display board
-            //Program.printBoard(myBoard);
+            Program.printBoard(myBoard);
         }
 
         public Cell GetPlayerCell()

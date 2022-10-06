@@ -1,0 +1,16 @@
+D:\C#\BCDE222\Assessment1\Assessment1\bin\Debug\net5.0\Assessment1.exe
+D:\C#\BCDE222\Assessment1\Assessment1\bin\Debug\net5.0\Assessment1.deps.json
+D:\C#\BCDE222\Assessment1\Assessment1\bin\Debug\net5.0\Assessment1.runtimeconfig.json
+D:\C#\BCDE222\Assessment1\Assessment1\bin\Debug\net5.0\Assessment1.runtimeconfig.dev.json
+D:\C#\BCDE222\Assessment1\Assessment1\bin\Debug\net5.0\Assessment1.dll
+D:\C#\BCDE222\Assessment1\Assessment1\bin\Debug\net5.0\Assessment1.pdb
+D:\C#\BCDE222\Assessment1\Assessment1\obj\Debug\net5.0\Assessment1.csproj.AssemblyReference.cache
+D:\C#\BCDE222\Assessment1\Assessment1\obj\Debug\net5.0\Assessment1.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\BCDE222\Assessment1\Assessment1\obj\Debug\net5.0\Assessment1.AssemblyInfoInputs.cache
+D:\C#\BCDE222\Assessment1\Assessment1\obj\Debug\net5.0\Assessment1.AssemblyInfo.cs
+D:\C#\BCDE222\Assessment1\Assessment1\obj\Debug\net5.0\Assessment1.csproj.CoreCompileInputs.cache
+D:\C#\BCDE222\Assessment1\Assessment1\obj\Debug\net5.0\Assessment1.dll
+D:\C#\BCDE222\Assessment1\Assessment1\obj\Debug\net5.0\refint\Assessment1.dll
+D:\C#\BCDE222\Assessment1\Assessment1\obj\Debug\net5.0\Assessment1.pdb
+D:\C#\BCDE222\Assessment1\Assessment1\obj\Debug\net5.0\Assessment1.genruntimeconfig.cache
+D:\C#\BCDE222\Assessment1\Assessment1\obj\Debug\net5.0\ref\Assessment1.dll

@@ -7,11 +7,11 @@ namespace ChessMaze
 {
     public class Program
     {
-        static Board myBoard = new(8);
-        static Game theGame = new();
+        static readonly Board myBoard = new(8);
+        static Game game = new();
         static void Main(string[] args)
         {
-            theGame.Start();
+            game.Start();
         }
         public static void printBoard(Board myBoard)
         {

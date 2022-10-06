@@ -144,6 +144,8 @@ namespace ChessMazeTests
             int actualRow = nextMove.RowNumber;
             Console.WriteLine("Col {0}, Row {1}", nextMove.ColumnNumber, nextMove.RowNumber);
 
+            game.Start();
+
             Assert.AreEqual(expectedCol, actualCol);
             Assert.AreEqual(expectedRow, actualRow);
         }
