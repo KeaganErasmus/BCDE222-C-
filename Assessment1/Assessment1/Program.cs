@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
+//29 Using statement
+using System.IO;
 
 namespace Assessment1
 {
@@ -12,14 +13,23 @@ namespace Assessment1
         public const double DaysPerWeek = (double)Days / (double)Weeks;
         public const double DaysPerMonth = (double)Days / (double)Months;
 
+        public enum Season
+        {
+            Spring,
+            Summer,
+            Autumn,
+            Winter
+        }
+
+
 
         static void Main(string[] args)
         {
 
             #region Syntax Features method calls PART A
-            //1 Selection statements
-            Console.WriteLine("1-Selection statements");
-            SelectionStatement(45);
+            //1 Selection statements//31 Named Arguments
+            Console.WriteLine("1-Selection statements 31-Named Arguments");
+            SelectionStatement(value: 48);
             Console.WriteLine("");
 
             //2 Iteration statements
@@ -131,6 +141,83 @@ namespace Assessment1
             var date = DateTime.Now;
             Console.WriteLine($"Hello, {name}! Today is {date.DayOfWeek}, it's {date:HH:mm} now.");
             Console.WriteLine("");
+
+            //27 Enumeration types
+            Season a = Season.Autumn;
+            Console.WriteLine($"Integral value of {a} is {(int)a}");  // output: Integral value of Autumn is 2
+            var b = (Season)1;
+            Console.WriteLine(b);  // output: Summer
+            var c = (Season)4;
+            Console.WriteLine(c);  // output: 4
+            Console.WriteLine("");
+
+            //28 Exceptions and Exception Handling
+            // Input for test purposes. Change the values to see
+            // exception handling behavior.
+            double q = 98, w = 0;
+            double result;
+            try
+            {
+                result = SafeDivision(q, w);
+                Console.WriteLine("{0} divided by {1} = {2}", a, b, result);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Attempted divide by zero.");
+            }
+
+            //29 Using statement
+            string manyLines = @"This is line one
+                This is line two
+                Here is line three
+                The penultimate line is line four
+                This is the final, fifth line.";
+            using (var reader = new StringReader(manyLines))
+            {
+                string? item;
+                do
+                {
+                    item = reader.ReadLine();
+                    Console.WriteLine(item);
+                } while (item != null);
+            }
+
+            //30 Init accessors
+            var s = new Student()
+            {
+                FirstName = "Jared",
+                LastName = "Parosns",
+            };
+            Console.WriteLine($"Fistname: {s.FirstName}, Lastname: {s.LastName}");
+            Console.WriteLine("");
+
+            //32 When
+
+            //33 Object and Collection Initializers
+            Student newStudent = new Student {FirstName = "Keagan", LastName = "Erasmus" };
+            Console.WriteLine($"Student:\nFirstName: {newStudent.FirstName} LastName: {newStudent.LastName}");
+            Console.WriteLine("");
+
+            //34 Reflection
+            int i = 42;
+            Type type = i.GetType();
+            Console.WriteLine(type);
+            Console.WriteLine("");
+
+            //35 Delegates
+            // Instantiate the delegate.
+            Del handler = DelegateMethod;
+            // Call the delegate.
+            handler("Hello World");
+            Console.WriteLine("");
+
+            //36 Event
+
+            //37 Indexers
+            var stringCollection = new SampleCollection<string>();
+            stringCollection[0] = "Hello, World This is using Idexers";
+            Console.WriteLine(stringCollection[0]);
+            Console.WriteLine("");
             #endregion
 
 
@@ -203,8 +290,41 @@ namespace Assessment1
                 System.Console.WriteLine(a + " " + b);
             }
 
+            static double SafeDivision(double x, double y)
+            {
+                if (y == 0)
+                    throw new DivideByZeroException();
+                return x / y;
+            }
+
             #endregion
+
             Console.ReadKey();
+        }
+
+        public delegate void Del(string message);
+        public static void DelegateMethod(string message)
+        {
+            Console.WriteLine(message);
+        }
+
+        class SampleCollection<T>
+        {
+            // Declare an array to store the data elements.
+            private T[] arr = new T[100];
+
+            // Define the indexer to allow client code to use [] notation.
+            public T this[int i]
+            {
+                get { return arr[i]; }
+                set { arr[i] = value; }
+            }
+        }
+
+        class Student
+        {
+            public string FirstName { get; init; }
+            public string LastName { get; init; }
         }
 
         public class Person
