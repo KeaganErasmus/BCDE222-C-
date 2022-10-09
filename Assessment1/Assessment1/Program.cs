@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 //29 Using statement
 using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Assessment1
 {
@@ -143,6 +145,7 @@ namespace Assessment1
             Console.WriteLine("");
 
             //27 Enumeration types
+            Console.WriteLine("27-Enumeration types");
             Season a = Season.Autumn;
             Console.WriteLine($"Integral value of {a} is {(int)a}");  // output: Integral value of Autumn is 2
             var b = (Season)1;
@@ -154,6 +157,7 @@ namespace Assessment1
             //28 Exceptions and Exception Handling
             // Input for test purposes. Change the values to see
             // exception handling behavior.
+            Console.WriteLine("28-Exceptions and Exception Handling");
             double q = 98, w = 0;
             double result;
             try
@@ -167,6 +171,7 @@ namespace Assessment1
             }
 
             //29 Using statement
+            Console.WriteLine("29-Using statements");
             string manyLines = @"This is line one
                 This is line two
                 Here is line three
@@ -183,6 +188,7 @@ namespace Assessment1
             }
 
             //30 Init accessors
+            Console.WriteLine("30-Init accessors");
             var s = new Student()
             {
                 FirstName = "Jared",
@@ -192,19 +198,25 @@ namespace Assessment1
             Console.WriteLine("");
 
             //32 When
+            Console.WriteLine("32-When");
+            Console.WriteLine(MakeRequest().Result);
+            Console.WriteLine("");
 
             //33 Object and Collection Initializers
+            Console.WriteLine("33-Object and Collection Initializers");
             Student newStudent = new Student {FirstName = "Keagan", LastName = "Erasmus" };
             Console.WriteLine($"Student:\nFirstName: {newStudent.FirstName} LastName: {newStudent.LastName}");
             Console.WriteLine("");
 
             //34 Reflection
+            Console.WriteLine("34-Reflection");
             int i = 42;
             Type type = i.GetType();
             Console.WriteLine(type);
             Console.WriteLine("");
 
             //35 Delegates
+            Console.WriteLine("35-Delegates");
             // Instantiate the delegate.
             Del handler = DelegateMethod;
             // Call the delegate.
@@ -212,8 +224,19 @@ namespace Assessment1
             Console.WriteLine("");
 
             //36 Event
+            Console.WriteLine("36-Event");
+            Counter counter = new Counter(new Random().Next(10));
+            counter.ThresholdReached += c_ThresholdReached;
+            Console.WriteLine("press 'a' key to increase total");
+            while (Console.ReadKey(true).KeyChar == 'a')
+            {
+                Console.WriteLine("adding one");
+                counter.Add(1);
+            }
+            Console.WriteLine("");
 
             //37 Indexers
+            Console.WriteLine("37-Indexers");
             var stringCollection = new SampleCollection<string>();
             stringCollection[0] = "Hello, World This is using Idexers";
             Console.WriteLine(stringCollection[0]);
@@ -297,15 +320,66 @@ namespace Assessment1
                 return x / y;
             }
 
+            static void c_ThresholdReached(object sender, EventArgs e)
+            {
+                Console.WriteLine("The threshold was reached.");
+                Environment.Exit(0);
+            }
+
             #endregion
 
             Console.ReadKey();
+        }
+
+        public static async Task<string> MakeRequest()
+        {
+            var client = new HttpClient();
+            var streamTask = client.GetStringAsync("https://localHost:10000");
+            try
+            {
+                var responseText = await streamTask;
+                return responseText;
+            }
+            catch (HttpRequestException e) when (e.Message.Contains("301"))
+            {
+                return "Site Moved";
+            }
+            catch (HttpRequestException e) when (e.Message.Contains("404"))
+            {
+                return "Page Not Found";
+            }
+            catch (HttpRequestException e)
+            {
+                return e.Message;
+            }
         }
 
         public delegate void Del(string message);
         public static void DelegateMethod(string message)
         {
             Console.WriteLine(message);
+        }
+
+        class Counter
+        {
+            private int threshold;
+            private int total;
+
+            public Counter(int passedThreshold)
+            {
+                threshold = passedThreshold;
+            }
+
+            public void Add(int x)
+            {
+                total += x;
+                if (total >= threshold)
+                {
+                    ThresholdReached?.Invoke(this, EventArgs.Empty);
+                }
+            }
+
+            public event EventHandler ThresholdReached;
         }
 
         class SampleCollection<T>
