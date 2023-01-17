@@ -9,13 +9,22 @@ namespace ChessMaze
 {
     public class Game : IGame
     {
-        static Board myBoard = new(8);
+        public const int boardSize = 8;
+
+        static Board myBoard = new(boardSize);
         public int moveCount;
+        public string levelName;
 
         public int GetMoveCount()
         {
             moveCount += 1;
             return moveCount;
+        }
+
+        public string SetLevelName(string name)
+        {
+            levelName = name;
+            return levelName;
         }
 
         public bool IsFinished()
@@ -30,22 +39,34 @@ namespace ChessMaze
             }
         }
 
+
         public void Load()
         {
-            myBoard.SetLevelName("Level1");
-            Console.WriteLine(myBoard.levelName);
-            myBoard.SetCurrentCell(1, 3);
-            myBoard.WinCell(7,7);
-            // Sets the first piece and this piece is what the player will start as
-            myBoard.SetOccupiedPiece(1, 3, (Part)'R');
+            //myBoard.SetLevelName("Level1");
+            //Console.WriteLine(myBoard.levelName);
 
-            // Set pieces on board for the first level
-            myBoard.SetOccupiedPiece(0, 7, (Part)'N');
-            myBoard.SetOccupiedPiece(2, 6, (Part)'B');
-            myBoard.SetOccupiedPiece(3, 7, (Part)'R');
-            myBoard.SetOccupiedPiece(1, 3, (Part)'K');
-            myBoard.SetOccupiedPiece(0, 4, (Part)'R');
-            myBoard.SetOccupiedPiece(7, 7, (Part)'K');
+            myBoard.SetCurrentCell(0,0);
+
+            myBoard.lastCell = myBoard.theGrid[0, 0];
+
+            myBoard.WinCell(2,2);
+            // Sets the first piece and this piece is what the player will start as
+            //myBoard.SetOccupiedPiece(0, 0, (Part)'R');
+
+            // Set pieces on board for the first level this design comes from the mazelog home page
+            myBoard.SetOccupiedPiece(0, 0, (Part)'R');
+            myBoard.SetOccupiedPiece(0, 2, (Part)'N');
+            myBoard.SetOccupiedPiece(1, 2, (Part)'Q');
+            myBoard.SetOccupiedPiece(2, 2, (Part)'K');
+            myBoard.SetOccupiedPiece(2, 0, (Part)'B');
+            myBoard.SetOccupiedPiece(2, 1, (Part)'B');
+
+            //myBoard.SetOccupiedPiece(0, 7, (Part)'N');
+            //myBoard.SetOccupiedPiece(2, 6, (Part)'B');
+            //myBoard.SetOccupiedPiece(3, 7, (Part)'R');
+            //myBoard.SetOccupiedPiece(1, 3, (Part)'K');
+            //myBoard.SetOccupiedPiece(0, 4, (Part)'R');
+            //myBoard.SetOccupiedPiece(7, 7, (Part)'K');
         }
 
         public void SelectMove()
@@ -90,22 +111,17 @@ namespace ChessMaze
             }
         }
 
-        public void Move(int nextRow , int nextCol)
+        public int[,] Move(int nextRow , int nextCol)
         {
             Cell nextCell = myBoard.SetNextMove(nextRow, nextCol);
 
             // Calc next legal moves
             myBoard.MarkNextLegalMoves(nextCell, nextCell.Piece);
 
-            // Increase move count by 1
-            GetMoveCount();
-
             // Display board
-            Program.printBoard(myBoard);
+            //Program.printBoard(myBoard);
 
-            //Display Movecount
-            GetMoveCount();
-            Console.WriteLine("");
+            return GetPlayerCell();
         }
 
         public void Restart()
@@ -120,6 +136,8 @@ namespace ChessMaze
 
             myBoard.StartTimer();
 
+            myBoard.MoveCount = 0;
+
             // load pieces onto the board
             Load();
 
@@ -129,17 +147,25 @@ namespace ChessMaze
             myBoard.MarkNextLegalMoves(currentCell, currentCell.Piece);
 
             // Display board
-            Program.printBoard(myBoard);
+            //Program.printBoard(myBoard);
         }
 
-        public Cell GetPlayerCell()
+        public int[,] GetPlayerCell()
         {
-            return myBoard.playerCell;
+            int[,] thePlayer = new int[,] { { myBoard.playerCell.RowNumber, myBoard.playerCell.ColumnNumber } };
+            return thePlayer;
         }
 
-        public Cell GetFinalCell()
+        public int[,] GetFinalCell()
         {
-            return myBoard.finishCell;
+            int[,] theFinalCell = new int[,] { { myBoard.finishCell.RowNumber, myBoard.finishCell.ColumnNumber } };
+            return theFinalCell;
+        }
+
+        public int[,] GetPrevCell()
+        {
+            int[,] prevCell = new int[,] { { myBoard.lastCell.RowNumber, myBoard.lastCell.ColumnNumber} };
+            return prevCell;
         }
 
         public void Undo()

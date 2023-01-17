@@ -1,0 +1,346 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ChessMaze
+{
+    public class Board
+    {
+        //Size of the maze board - will determine the number of cells
+        public int Size { get; set; }
+
+        public int MoveCount;
+        // this is a 2d array of cells (like a chess board)
+        public Cell[,] mazeGrid { get; set; }
+        public Cell playerCell { get; set; }
+        public Cell prevCell { get; set; }
+        public Cell finalCell { get; set; }
+
+        // Constructor
+        public Board (int size)
+        {
+            Size = size;
+
+            mazeGrid = new Cell[Size, Size];
+
+            // populate 2d array 
+            //loops through to populate the RowNumber value in Cell
+            for (int x = 0; x < Size; x++)
+            {
+                //loops through to populate the ColumnNumber value in Cell
+                for (int y = 0; y < Size; y++)
+                {
+                    mazeGrid[x, y] = new Cell(x, y);
+                }
+            }
+        }
+
+        protected void RookMovement(Cell currentCell)
+        {
+            // DOWN
+            for (int i = 1; i <= Size - currentCell.RowNumber; i++)
+            {
+                // check if Down movement is valid
+                if (currentCell.RowNumber + i <= Size - 1)
+                {
+                    // check if next cell is occupied
+                    if (mazeGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].CurrentlyOccupied)
+                    {
+                        mazeGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
+                        break;
+                    }
+                    else
+                    {
+                        mazeGrid[currentCell.RowNumber + i, currentCell.ColumnNumber].LegalNextMove = true;
+                    }
+                }
+            }
+
+            // LEFT
+            for (int j = 1; j < (currentCell.ColumnNumber + 1); j++)
+            {
+                // check if next cell is occupied - if so then set as legal and exit the for loop
+                if (mazeGrid[currentCell.RowNumber, currentCell.ColumnNumber - j].CurrentlyOccupied)
+                {
+                    mazeGrid[currentCell.RowNumber, currentCell.ColumnNumber - j].LegalNextMove = true;
+                    break;
+                }
+                else
+                {
+                    mazeGrid[currentCell.RowNumber, currentCell.ColumnNumber - j].LegalNextMove = true;
+                }
+            }
+
+            //  UP
+            for (int i = 1; i <= currentCell.RowNumber; i++)
+            {
+                // check if Up movement is valid
+                if (currentCell.RowNumber - i >= 0)
+                {
+                    // check if next cell is occupied
+                    if (mazeGrid[currentCell.RowNumber - i, currentCell.ColumnNumber].CurrentlyOccupied)
+                    {
+                        mazeGrid[currentCell.RowNumber - i, currentCell.ColumnNumber].LegalNextMove = true;
+                        break;
+                    }
+                    else
+                    {
+                        mazeGrid[currentCell.RowNumber - i, currentCell.ColumnNumber].LegalNextMove = true;
+                    }
+                }
+            }
+            //RIGHT
+            for (int j = 1; j < Size - currentCell.ColumnNumber; j++)
+            {
+                // check if next cell is occupied - if so then set as legal and exit the for loop
+                if (mazeGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].CurrentlyOccupied)
+                {
+                    mazeGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].LegalNextMove = true;
+                    break;
+                }
+                else
+                {
+                    mazeGrid[currentCell.RowNumber, currentCell.ColumnNumber + j].LegalNextMove = true;
+                }
+            }
+        }
+
+        protected void BishopMovement(Cell currentCell)
+        {
+            for (var i = 1; i < Size; ++i)
+            {
+                if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
+                    & (currentCell.ColumnNumber + i >= 0) & (currentCell.ColumnNumber + i < Size))
+                {
+                    // check if next cell is occupied - if so then set as legal and exit the for loop
+                    if (mazeGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].CurrentlyOccupied)
+                    {
+                        mazeGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].LegalNextMove = true;
+                        break;
+                    }
+                    else
+                    {
+                        mazeGrid[currentCell.RowNumber + i, currentCell.ColumnNumber + i].LegalNextMove = true;
+                    }
+                }
+            }
+            for (var i = 1; i < Size; ++i)
+            {
+                if ((currentCell.RowNumber - i >= 0) & (currentCell.RowNumber - i < Size)
+                    & (currentCell.ColumnNumber - i >= 0) & (currentCell.ColumnNumber - i < Size))
+                {
+                    // check if next cell is occupied - if so then set as legal and exit the for loop
+                    if (mazeGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].CurrentlyOccupied)
+                    {
+                        mazeGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].LegalNextMove = true;
+                        break;
+                    }
+                    else
+                    {
+                        mazeGrid[currentCell.RowNumber - i, currentCell.ColumnNumber - i].LegalNextMove = true;
+                    }
+                }
+            }
+            for (var i = 1; i < Size; ++i)
+            {
+                if ((currentCell.RowNumber + i >= 0) & (currentCell.RowNumber + i < Size)
+                    & (currentCell.ColumnNumber - i >= 0) & (currentCell.ColumnNumber - i < Size))
+                {
+                    // check if next cell is occupied - if so then set as legal and exit the for loop
+                    if (mazeGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].CurrentlyOccupied)
+                    {
+                        mazeGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].LegalNextMove = true;
+                        break;
+                    }
+                    else
+                    {
+                        mazeGrid[currentCell.RowNumber + i, currentCell.ColumnNumber - i].LegalNextMove = true;
+                    }
+                }
+            }
+            for (var i = 1; i < Size; ++i)
+            {
+                if ((currentCell.RowNumber - i >= 0) & (currentCell.RowNumber - i < Size)
+                    & (currentCell.ColumnNumber + i >= 0) & (currentCell.ColumnNumber + i < Size))
+                {
+                    // check if next cell is occupied - if so then set as legal and exit the for loop
+                    if (mazeGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].CurrentlyOccupied)
+                    {
+                        mazeGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].LegalNextMove = true;
+                        break;
+                    }
+                    else
+                    {
+                        mazeGrid[currentCell.RowNumber - i, currentCell.ColumnNumber + i].LegalNextMove = true;
+                    }
+                }
+            }
+        }
+
+        protected void KnightMovement(Cell currentCell)
+        {
+            int[,] targetPositions = new int[,]
+                   {
+                        {  2, -1 },
+                        {  2,  1 },
+                        {  1,  2 },
+                        {  1, -2 },
+                        { -1,  2 },
+                        { -1, -2 },
+                        { -2,  1 },
+                        { -2, -1 }
+                   };
+
+
+            for (var i = 0; i < targetPositions.GetLength(0); ++i)
+            {
+                if ((currentCell.RowNumber + targetPositions[i, 0] >= 0) & (currentCell.RowNumber + targetPositions[i, 0] < Size)
+                    & (currentCell.ColumnNumber + targetPositions[i, 1] >= 0) & (currentCell.ColumnNumber + targetPositions[i, 1] < Size))
+                {
+                    mazeGrid[currentCell.RowNumber + targetPositions[i, 0], currentCell.ColumnNumber + targetPositions[i, 1]].LegalNextMove = true;
+                }
+            }
+        }
+
+        protected void KingMovement(Cell currentCell)
+        {
+            int[,] targetPositions = new int[,]
+                    {
+                        {  1, -1 },
+                        {  1,  1 },
+                        {  1,  0 },
+                        { -1, -1 },
+                        { -1,  1 },
+                        { -1,  0 },
+                        {  0,  1 },
+                        {  0, -1 }
+                    };
+
+
+            for (var i = 0; i < targetPositions.GetLength(0); ++i)
+            {
+                if ((currentCell.RowNumber + targetPositions[i, 0] >= 0) & (currentCell.RowNumber + targetPositions[i, 0] < Size)
+                    & (currentCell.ColumnNumber + targetPositions[i, 1] >= 0) & (currentCell.ColumnNumber + targetPositions[i, 1] < Size))
+                {
+                    mazeGrid[currentCell.RowNumber + targetPositions[i, 0], currentCell.ColumnNumber + targetPositions[i, 1]].LegalNextMove = true;
+                }
+            }
+        }
+
+        public void NextLegalMove (Cell currentCell, Part piece)
+        {
+            ResetLegalCells();
+            // display legal moves for each piece
+            switch (piece)
+            {
+                case (Part)'N':
+                    KnightMovement(currentCell);
+                    break;
+
+                case (Part)'B':
+                    BishopMovement(currentCell);
+                    break;
+
+                case (Part)'Q':
+                    // Diagonal movement
+                    BishopMovement(currentCell);
+
+                    // Vertical and horizontal movement
+                    RookMovement(currentCell);
+                    break;
+
+                case (Part)'K':
+                    KingMovement(currentCell);
+                    break;
+
+                case (Part)'R':
+                    RookMovement(currentCell);
+                    break;
+            }
+        }
+
+        public void SetStartGame()
+        {
+            //reset Board
+            for (int x = 0; x < Size; x++)
+            {
+                for (int y = 0; y < Size; y++)
+                {
+                    mazeGrid[x, y].CurrentlyOccupied = false;
+                    mazeGrid[x, y].LegalNextMove = false;
+                }
+            }
+            MoveCount = 0;
+        }
+
+        public void ResetLegalCells()
+        {
+            for (int x = 0; x < Size; x++)
+            {
+                for (int y = 0; y < Size; y++)
+                {
+                    mazeGrid[x, y].LegalNextMove = false;
+                }
+            }
+        }
+
+        public Cell SetCurrentCell(int currentRow, int currentCol)
+        {
+            playerCell = this.mazeGrid[currentRow, currentCol];
+            
+            return playerCell;
+        }
+
+        public Cell SetOccupiedPiece(int occupiedRow, int occupiedCol, Part piece)
+        {
+            Cell occupiedCell = this.mazeGrid[occupiedRow, occupiedCol];
+            // get x and y co-ords and check they're are within the board
+            if (occupiedCell.isValid(Size))
+            {
+                occupiedCell.Piece = piece;
+                occupiedCell.CurrentlyOccupied = true;
+                return occupiedCell;
+            }
+            else
+            {
+                Console.WriteLine("ColumnNumber and RowNumber number must be between 0 - 7");
+                return occupiedCell;
+            }
+        }
+
+        public Cell SetNextMove(int nextRow, int nextCol)
+        {
+            prevCell = playerCell;
+            playerCell = mazeGrid[nextRow, nextCol];
+            
+            // Checks if next cell is a legal move and there is a piece there
+            if (playerCell.LegalNextMove & playerCell.CurrentlyOccupied)
+            {
+                SetCurrentCell(nextRow, nextCol);
+                AddToMoveCount();
+                return playerCell;
+            }
+            else
+            {
+                //Console.WriteLine("Illegal Move");
+                playerCell = prevCell;
+                return playerCell;
+            }
+        }
+
+        public Cell SetFinalCell(int finalRow, int finalCol)
+        {
+            finalCell = mazeGrid[finalRow, finalCol];
+            return finalCell;
+        }
+
+        public int AddToMoveCount()
+        {
+            MoveCount += 1;
+
+            return MoveCount;
+        }
+    }
+}

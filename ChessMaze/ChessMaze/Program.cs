@@ -8,7 +8,7 @@ namespace ChessMaze
     public class Program
     {
         static readonly Board myBoard = new(8);
-        static Game game = new();
+        static readonly Game game = new();
         static void Main(string[] args)
         {
             game.Start();

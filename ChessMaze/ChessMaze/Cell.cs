@@ -18,6 +18,20 @@ namespace ChessMaze
 
         public Part Piece { get; set; }
 
+        // This code is to make Sam's model to work with  my view
+        //public bool isValid(int size)
+        //{
+        //    if ((this.ColumnNumber >= 0 & this.ColumnNumber < size) & (this.RowNumber >= 0 & this.RowNumber < size))
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        this.LegalNextMove = false;
+        //        return false;
+        //    }
+        //}
+
         public Cell(int x, int y)
         {
             RowNumber = x;

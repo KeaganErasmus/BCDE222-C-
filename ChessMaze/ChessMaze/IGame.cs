@@ -2,7 +2,7 @@
 {
     public interface IGame
     {
-        void Move(int nextRow, int nextCol);
+        int[,] Move(int nextRow, int nextCol);
         int GetMoveCount();
         void Undo();
         void Restart();
@@ -11,7 +11,8 @@
         void Load();
         void SelectMove();
         void SetMove();
-        Cell GetPlayerCell();
-        Cell GetFinalCell();
+        int[,] GetPlayerCell();
+        int[,] GetFinalCell();
+        int[,] GetPrevCell();
     }
 }

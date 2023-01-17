@@ -1,0 +1,104 @@
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessForm.exe
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessForm.deps.json
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessForm.runtimeconfig.json
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessForm.runtimeconfig.dev.json
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessForm.dll
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ref\ChessForm.dll
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessForm.pdb
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.AssemblyReference.cache
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.Form1.resources
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.Properties.Resources.resources
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.GenerateResource.cache
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.AssemblyInfoInputs.cache
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.AssemblyInfo.cs
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.CoreCompileInputs.cache
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.dll
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ref\ChessForm.dll
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.pdb
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.genruntimeconfig.cache
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessMaze.deps.json
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessMaze.runtimeconfig.json
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessMaze.runtimeconfig.dev.json
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessMaze.exe
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessMaze.dll
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\bin\Debug\net5.0-windows\ChessMaze.pdb
+C:\Users\sammo\OneDrive\2022\BCDE222\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.CopyComplete
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessMaze.deps.json
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessMaze.runtimeconfig.json
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessMaze.runtimeconfig.dev.json
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessMaze.exe
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessForm.exe
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessForm.deps.json
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessForm.runtimeconfig.json
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessForm.runtimeconfig.dev.json
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessForm.dll
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessForm.pdb
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessMaze.dll
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\bin\Debug\net5.0-windows\ChessMaze.pdb
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.AssemblyReference.cache
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.Form1.resources
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.Properties.Resources.resources
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.GenerateResource.cache
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.AssemblyInfoInputs.cache
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.AssemblyInfo.cs
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.CoreCompileInputs.cache
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.CopyComplete
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.dll
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\refint\ChessForm.dll
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.pdb
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ChessForm.genruntimeconfig.cache
+C:\Users\Keagan\OneDrive - Ara Institute of Canterbury\Y1 S1\Desktop\ChessMaze-main\ChessForm\obj\Debug\net5.0-windows\ref\ChessForm.dll
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessMaze.deps.json
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessMaze.runtimeconfig.json
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessMaze.runtimeconfig.dev.json
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessMaze.exe
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessForm.exe
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessForm.deps.json
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessForm.runtimeconfig.json
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessForm.runtimeconfig.dev.json
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessForm.dll
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessForm.pdb
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessMaze.dll
+D:\C#\BCDE222\ChessMaze\ChessForm\bin\Debug\net5.0-windows\ChessMaze.pdb
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.AssemblyReference.cache
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.Form1.resources
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.Properties.Resources.resources
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.GenerateResource.cache
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.AssemblyInfoInputs.cache
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.AssemblyInfo.cs
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.CoreCompileInputs.cache
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.csproj.CopyComplete
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.dll
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\refint\ChessForm.dll
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.pdb
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ChessForm.genruntimeconfig.cache
+D:\C#\BCDE222\ChessMaze\ChessForm\obj\Debug\net5.0-windows\ref\ChessForm.dll
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessMaze.deps.json
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessMaze.runtimeconfig.json
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessMaze.runtimeconfig.dev.json
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessMaze.exe
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessForm.exe
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessForm.deps.json
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessForm.runtimeconfig.json
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessForm.runtimeconfig.dev.json
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessForm.dll
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessForm.pdb
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessMaze.dll
+D:\C#\BCDE222\ChessMaze\ChessApp\bin\Debug\net5.0-windows\ChessMaze.pdb
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.csproj.AssemblyReference.cache
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.Form1.resources
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.Properties.Resources.resources
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.csproj.GenerateResource.cache
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.AssemblyInfoInputs.cache
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.AssemblyInfo.cs
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.csproj.CoreCompileInputs.cache
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.csproj.CopyComplete
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.dll
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\refint\ChessForm.dll
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.pdb
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ChessForm.genruntimeconfig.cache
+D:\C#\BCDE222\ChessMaze\ChessApp\obj\Debug\net5.0-windows\ref\ChessForm.dll

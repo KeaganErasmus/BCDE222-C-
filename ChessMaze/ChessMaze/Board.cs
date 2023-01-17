@@ -16,9 +16,10 @@ namespace ChessMaze
         public Cell finishCell { get; set; }
         public Cell lastCell { get; set; }
 
-        public string levelName;
-
+        public int MoveCount;
+        public static string levelName;
         public Stopwatch timer = new();
+
         public Board(int s)
         {
             // Initial board size
@@ -36,11 +37,12 @@ namespace ChessMaze
             }
         }
 
-        public string SetLevelName(string name)
+        public static string SetLevelName(string name)
         {
             levelName = name;
             return levelName;
         }
+
         public void StartTimer()
         {
             timer.Start();
@@ -53,7 +55,7 @@ namespace ChessMaze
             string time = timeTaken.ToString(@"m\:ss\.fff");
 
             // Print the time taken
-            Console.WriteLine("Time Taken: {0}", time);
+            Console.WriteLine($"Time Taken: {time}");
             return time;
         }
 
@@ -154,16 +156,16 @@ namespace ChessMaze
         protected void KingMove(Cell currentCell)
         {
             int[,] targetPositions = new int[,]
-            {
-                {  1, -1 },
-                {  1,  1 },
-                {  1,  0 },
-                { -1, -1 },
-                { -1,  1 },
-                { -1,  0 },
-                {  0,  1 },
-                {  0, -1 }
-            };
+                    {
+                        {  1, -1 },
+                        {  1,  1 },
+                        {  1,  0 },
+                        { -1, -1 },
+                        { -1,  1 },
+                        { -1,  0 },
+                        {  0,  1 },
+                        {  0, -1 }
+                    };
 
 
             for (var i = 0; i < targetPositions.GetLength(0); ++i)
@@ -275,6 +277,7 @@ namespace ChessMaze
 
         public void MarkNextLegalMoves(Cell currentCell, Part chessPiece)
         {
+            ResetAllLegalMoves();
             // display legal moves for each piece
             switch (chessPiece)
             {
@@ -309,23 +312,24 @@ namespace ChessMaze
         {
             playerCell = this.theGrid[currentRow, currentCol];
             Cell currentCell = this.theGrid[currentRow, currentCol];
-            if (currentCell.CurrentlyOccupied)
-            {
-                currentCell.playerCell = true;
-                return currentCell;
-            }
-            else
-            {
-                Console.WriteLine("ColumnNumber and RowNumber number must be between 0 - 8");
-                return currentCell;
-            }
+            //if (currentCell.CurrentlyOccupied)
+            //{
+            //    currentCell.playerCell = true;
+            //    return currentCell;
+            //}
+            //else
+            //{
+            //    Console.WriteLine("ColumnNumber and RowNumber number must be between 0 - 8");
+            //    return currentCell;
+            //}
+
+            return playerCell;
 
         }
 
         public Cell SetOccupiedPiece(int occupiedRow, int occupiedCol, Part piece)
         {
             Cell occupiedCell = this.theGrid[occupiedRow, occupiedCol];
-            // get x and y co-ords and check they're are within the board
             if (!occupiedCell.CurrentlyOccupied)
             {
                 occupiedCell.Piece = piece;
@@ -347,7 +351,7 @@ namespace ChessMaze
             // Checks if next cell is a legal move and there is a piece there
             if (playerCell.LegalNextMove & playerCell.CurrentlyOccupied)
             {
-                SetCurrentCell(nextRow, nextCol);
+                SetCurrentCell(nextRow, nextCol);  
                 return playerCell;
             }
             else
